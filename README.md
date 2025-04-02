@@ -1,10 +1,10 @@
 # pj2-atacado-reactJS
 
+<img src="/home/robson/Documentos/faculdadeCesar/02-ads/pj2-atacado-reactJS/atacado-site/src/assets/Logo CMYK - Atacado dos Presentes - Horizontal 1.svg" alt="Logo do atacado dos presentes">
 
 
-
-PROJETO:                  Site Remodelado do Atcado dos Presentes.
-********************************************************************************************
+PROJETO:                  Site Remodelado do Atacado dos Presentes.
+****************************************************************************************
 
 EQUIPE: Juliana Marçal Bezerra Jardim.
         Paulo César Ferreira de Assis.
