@@ -16,7 +16,7 @@ PROBLEMATICA: O Atacado dos Presentes, um dos maiores e mais respeitados varejis
 
 ********************************************************************************************
 
-FIGMA:[Prototipo de Alta Fidelidade](https://www.figma.com/proto/955Z53QYB7npK9rw6Ep1Ou/RiseUp-Atacado?node-id=1-2&t=KtJ3xnxnP2awjV4B-1&scaling=contain&content-scaling=fixed&page-id=0%3A1)
+<img src="https://github.com/Mareaturbo2/pj2-atacado-reactJS/blob/main/atacado-site/src/assets/icon%20full%20color%20(1).svg"alt="Figma-Logo">FIGMA:[Prototipo de Alta Fidelidade](https://www.figma.com/proto/955Z53QYB7npK9rw6Ep1Ou/RiseUp-Atacado?node-id=1-2&t=KtJ3xnxnP2awjV4B-1&scaling=contain&content-scaling=fixed&page-id=0%3A1)
 
 ********************************************************************************************
 FLUXOGRAMA DE ATIVADADES:
