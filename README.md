@@ -16,7 +16,7 @@ PROBLEMATICA: O atual site de um dos maiores varejistas regionais, o Atacado dos
 
 ********************************************************************************************
 
-                                IMAGEM DO TRELLO.
+                                     IMAGEM DO TRELLO.
 
 ![image](https://github.com/user-attachments/assets/083c6833-65f6-4c9d-b0ec-c56e70a9c1c2)
 
