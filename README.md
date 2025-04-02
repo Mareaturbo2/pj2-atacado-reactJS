@@ -14,7 +14,7 @@ EQUIPE: Juliana Marçal Bezerra Jardim.
 
 PROBLEMATICA: O atual site de um dos maiores varejistas regionais, o Atacado dos Presentes, está totalmente desatualizado e não condiz com os padrões tecnológicos e de design da era WEB 5.0. Diante dessa oportunidade de mercado, nosso grupo visa entregar um site totalmente remodelado, moderno, responsivo e alinhado com os padrões atuais, permitindo assim que essa grande empresa regional possa competir com os grandes varejistas de e-commerce.
 
-*****************************************IMAGEM DO TRELLO***************************************************
+********************************************************************************************
 
    
 
