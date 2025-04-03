@@ -16,7 +16,7 @@ PROBLEMATICA: O Atacado dos Presentes, um dos maiores e mais respeitados varejis
 
 ********************************************************************************************
 <div style="text-align: center;">
-<a href="https://www.figma.com/">
+<a style="text-align: center; ,  href="https://www.figma.com/">
 <img src="https://github.com/Mareaturbo2/pj2-atacado-reactJS/blob/main/atacado-site/src/assets/icon%20full%20color%20(1).svg" alt="Figma-Logo">
 </a>
 
