@@ -6,10 +6,10 @@
 PROJETO:                  Site Remodelado do Atacado dos Presentes.
 ****************************************************************************************
 
-EQUIPE: Juliana Marçal Bezerra Jardim.
-        Paulo César Ferreira de Assis.
-        Matheus Jose Cardoso Luna.
-        Robson Sandro Andrade Cunha Filho.
+EQUIPE: <p>Juliana Marçal Bezerra Jardim.</p>
+       <p>Paulo César Ferreira de Assis.</p>
+        <p>Matheus Jose Cardoso Luna.</p>
+        <p>Robson Sandro Andrade Cunha Filho.</p>
 ********************************************************************************************
 
 PROBLEMATICA: O Atacado dos Presentes, um dos maiores e mais respeitados varejistas de Pernambuco, possui atualmente um site desatualizado, que não acompanha as novas demandas tecnológicas e de design da era WEB 5.0. Aproveitando essa oportunidade, nosso grupo propõe a criação de uma plataforma inovadora, moderna e totalmente responsiva, alinhada às mais recentes tendências do mercado digital. Com uma solução personalizada e de alto impacto, buscamos não só renovar a presença online da empresa, mas também prepará-la para competir de maneira ainda mais assertiva com os principais players do e-commerce, ampliando suas oportunidades de crescimento e solidificando sua liderança no mercado regional.
