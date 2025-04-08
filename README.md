@@ -31,3 +31,33 @@ FLUXOGRAMA DE ATIVADADES:
 
 SCREENPLAY:
 <a href="https://youtu.be/MvHurUW7kcg" alt=VideoScreenplay:> ScreenPlay </a>
+
+********************************************************************************************
+HITORIAS:
+<h2>User-History-1</h2>
+<h3>Lista de Casamento</h3>
+<p>Usuários: Luiz e Melissa
+
+Funcionalidade: Lista de Casamento
+
+ 
+
+Cartão: Como um casal de clientes, queremos elaborar uma lista de casamento, para que possamos facilitar a escolha dos convidados no que nos dar de presente.
+
+Conversa: O casal acessa o site da loja e navega até a seção de "listas". Lá, visualizam a opção "Lista de Casamento" e clicam para iniciar a criação. Em seguida, escolhem os itens desejados entre os produtos disponíveis no site. Então, podem ser adicionados os itens e a quantidade desejada. Após isso, eles salvam a lista e recebem um código, que pode ser compartilhado com os convidados.
+
+Confirmação: A funcionalidade será confirmada quando:
+
+·        O casal conseguir acessar a aba de listas e criar uma lista de casamento no site.
+
+·        Os itens forem adicionados com sucesso e a lista puder ser salva.
+
+·        Um código de compartilhamento for gerado.
+
+Os convidados conseguirem acessar a lista por meio do código.
+
+<a href="https://www.figma.com/proto/955Z53QYB7npK9rw6Ep1Ou/RiseUp-Atacado?node-id=52-80" alt="Lista de Casamento"> FIGMA:List</a>
+
+
+</p>
+
