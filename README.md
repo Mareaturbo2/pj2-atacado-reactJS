@@ -3,10 +3,10 @@
 <img src="https://github.com/Mareaturbo2/pj2-atacado-reactJS/blob/main/atacado-site/src/assets/Logo%20CMYK%20-%20Atacado%20dos%20Presentes%20-%20Horizontal%201.svg" alt="Logo do atacado dos presentes">
 
 
-PROJETO:                  Site Remodelado do Atacado dos Presentes.
+<h2>PROJETO:</h2>                  Site Remodelado do Atacado dos Presentes.
 ****************************************************************************************
 
-EQUIPE: <p>Juliana Marçal Bezerra Jardim.</p>
+<h1>EQUIPE:</h1> <p>Juliana Marçal Bezerra Jardim.</p>
        <p>Paulo César Ferreira de Assis.</p>
         <p>Matheus Jose Cardoso Luna.</p>
         <p>Robson Sandro Andrade Cunha Filho.</p>
@@ -19,21 +19,21 @@ PROBLEMATICA: O Atacado dos Presentes, um dos maiores e mais respeitados varejis
 <img src="https://github.com/Mareaturbo2/pj2-atacado-reactJS/blob/main/atacado-site/src/assets/icon%20full%20color%20(1).svg" alt="Figma-Logo">
 </a>
 
-FIGMA:[Prototipo de Alta Fidelidade](https://www.figma.com/proto/955Z53QYB7npK9rw6Ep1Ou/RiseUp-Atacado?node-id=1-2&t=KtJ3xnxnP2awjV4B-1&scaling=contain&content-scaling=fixed&page-id=0%3A1)
+<h3>FIGMA:[Prototipo de Alta Fidelidade](https://www.figma.com/proto/955Z53QYB7npK9rw6Ep1Ou/RiseUp-Atacado?node-id=1-2&t=KtJ3xnxnP2awjV4B-1&scaling=contain&content-scaling=fixed&page-id=0%3A1)</h3>
 
 ********************************************************************************************
-FLUXOGRAMA DE ATIVADADES:
+<h1>FLUXOGRAMA DE ATIVADADES:</h1>
    
 
 ![image](https://github.com/user-attachments/assets/083c6833-65f6-4c9d-b0ec-c56e70a9c1c2)
 
 ********************************************************************************************
 
-SCREENPLAY:
+<h1>SCREENPLAY:</h1>
 <a href="https://youtu.be/MvHurUW7kcg" alt=VideoScreenplay:> ScreenPlay </a>
 
 ********************************************************************************************
-HITORIAS:
+<h1>HITORIAS:</h1>
 <h2>User-History-1</h2>
 <h3>Lista de Casamento</h3>
 <p><strong>Usuários:</strong> Luiz e Melissa
@@ -60,4 +60,28 @@ Os convidados conseguirem acessar a lista por meio do código.
 
 
 </p>
+<tr></tr>
+<h2>User-History-2</h2>
+<h3>Novidades da Semana</h3>
+<p><strong>Usuários:</strong> Stella
+
+<strong>Funcionalidade:</strong> Novidades da Semana
+
+ 
+
+<strong>Cartão:</strong>  Como uma cliente, quero me atentar às últimas novidades e      promoções do Atacado dos Presentes, para que eu possa encontrar e comprar os itens que achar interessante.
+
+<strong>Conversa:</strong> A cliente acessa o site do Atacado dos Presentes e visualiza, no menu principal, a aba "Novidades da Semana". Clicando nela, então será redirecionada para uma página com os produtos mais recentes e promoções em destaque.
+
+<strong>Confirmação:</strong> A funcionalidade será confirmada quando:
+
+A cliente acessar a aba “Novidades da Semana” no site.
+
+A cliente navegar pela seção.
+
+<a href="https://www.figma.com/proto/955Z53QYB7npK9rw6Ep1Ou/RiseUp-Atacado?node-id=84-6" alt="Novidades da Semana"> FIGMA:Novidades da Semana</a>
+
+
+</p>
+
 
