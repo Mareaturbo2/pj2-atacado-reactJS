@@ -31,7 +31,10 @@
 
 <h2>SCREENPLAY:</h2>
 <a href="https://youtu.be/MvHurUW7kcg" alt=VideoScreenplay:> ScreenPlay </a>
-<embed src="https://youtu.be/MvHurUW7kcg" allowfullscreen="true" width="425" height="344">
+<video width="320" height="240" controls>
+  <source src="https://github.com/Mareaturbo2/pj2-atacado-reactJS/blob/main/atacado-site/src/assets/screenplay-editado.mp4" type="video/mp4">
+
+</video>
 
 ********************************************************************************************
 <h2>HITORIAS:</h2>
