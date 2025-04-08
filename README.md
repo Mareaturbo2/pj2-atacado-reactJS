@@ -30,4 +30,4 @@ FLUXOGRAMA DE ATIVADADES:
 ********************************************************************************************
 
 SCREENPLAY:
-<img src="https://github.com/Mareaturbo2/pj2-atacado-reactJS/blob/main/atacado-site/src/assets/screenplay-editado.mp4" alt="ScreenPlay do Projeto">
+<img src="https://youtu.be/MvHurUW7kcg" alt="ScreenPlay do Projeto">
