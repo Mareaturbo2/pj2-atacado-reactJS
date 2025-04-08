@@ -30,4 +30,4 @@ FLUXOGRAMA DE ATIVADADES:
 ********************************************************************************************
 
 SCREENPLAY:
-<img src="<iframe width="1174" height="660" src="https://www.youtube.com/embed/MvHurUW7kcg" title="ScreenPlay Projeto" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>" alt="ScreenPlay do Projeto">
+<iframe width="1174" height="660" src="https://www.youtube.com/embed/MvHurUW7kcg" title="ScreenPlay Projeto" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
