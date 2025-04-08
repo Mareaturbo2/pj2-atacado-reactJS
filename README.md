@@ -4,15 +4,15 @@
 
 
 <h2>PROJETO:</h2>                  Site Remodelado do Atacado dos Presentes.
-****************************************************************************************
+********************************************************************************************
 
-<h1>EQUIPE:</h1> <p>Juliana Marçal Bezerra Jardim.</p>
+<h2>EQUIPE:</h2> <p>Juliana Marçal Bezerra Jardim.</p>
        <p>Paulo César Ferreira de Assis.</p>
         <p>Matheus Jose Cardoso Luna.</p>
         <p>Robson Sandro Andrade Cunha Filho.</p>
 ********************************************************************************************
 
-PROBLEMATICA: O Atacado dos Presentes, um dos maiores e mais respeitados varejistas de Pernambuco, possui atualmente um site desatualizado, que não acompanha as novas demandas tecnológicas e de design da era WEB 5.0. Aproveitando essa oportunidade, nosso grupo propõe a criação de uma plataforma inovadora, moderna e totalmente responsiva, alinhada às mais recentes tendências do mercado digital. Com uma solução personalizada e de alto impacto, buscamos não só renovar a presença online da empresa, mas também prepará-la para competir de maneira ainda mais assertiva com os principais players do e-commerce, ampliando suas oportunidades de crescimento e solidificando sua liderança no mercado regional.
+<h2>PROBLEMATICA:</h2> O Atacado dos Presentes, um dos maiores e mais respeitados varejistas de Pernambuco, possui atualmente um site desatualizado, que não acompanha as novas demandas tecnológicas e de design da era WEB 5.0. Aproveitando essa oportunidade, nosso grupo propõe a criação de uma plataforma inovadora, moderna e totalmente responsiva, alinhada às mais recentes tendências do mercado digital. Com uma solução personalizada e de alto impacto, buscamos não só renovar a presença online da empresa, mas também prepará-la para competir de maneira ainda mais assertiva com os principais players do e-commerce, ampliando suas oportunidades de crescimento e solidificando sua liderança no mercado regional.
 
 ********************************************************************************************
 <a href="https://www.figma.com/">
@@ -22,20 +22,20 @@ PROBLEMATICA: O Atacado dos Presentes, um dos maiores e mais respeitados varejis
 <h3>FIGMA:[Prototipo de Alta Fidelidade](https://www.figma.com/proto/955Z53QYB7npK9rw6Ep1Ou/RiseUp-Atacado?node-id=1-2&t=KtJ3xnxnP2awjV4B-1&scaling=contain&content-scaling=fixed&page-id=0%3A1)</h3>
 
 ********************************************************************************************
-<h1>FLUXOGRAMA DE ATIVADADES:</h1>
+<h2>FLUXOGRAMA DE ATIVADADES:</h2>
    
 
 ![image](https://github.com/user-attachments/assets/083c6833-65f6-4c9d-b0ec-c56e70a9c1c2)
 
 ********************************************************************************************
 
-<h1>SCREENPLAY:</h1>
+<h2>SCREENPLAY:</h2>
 <a href="https://youtu.be/MvHurUW7kcg" alt=VideoScreenplay:> ScreenPlay </a>
 
 ********************************************************************************************
-<h1>HITORIAS:</h1>
-<h2>User-History-1</h2>
-<h3>Lista de Casamento</h3>
+<h2>HITORIAS:</h2>
+<h3>User-History-1</h3>
+<h4>Lista de Casamento</h4>
 <p><strong>Usuários:</strong> Luiz e Melissa
 
 <strong>Funcionalidade:</strong> Lista de Casamento
@@ -60,9 +60,11 @@ Os convidados conseguirem acessar a lista por meio do código.
 
 
 </p>
-<tr></tr>
-<h2>User-History-2</h2>
-<h3>Novidades da Semana</h3>
+
+<hr/>
+
+<h3>User-History-2</h3>
+<h4>Novidades da Semana</h4>
 <p><strong>Usuários:</strong> Stella
 
 <strong>Funcionalidade:</strong> Novidades da Semana
@@ -74,10 +76,13 @@ Os convidados conseguirem acessar a lista por meio do código.
 <strong>Conversa:</strong> A cliente acessa o site do Atacado dos Presentes e visualiza, no menu principal, a aba "Novidades da Semana". Clicando nela, então será redirecionada para uma página com os produtos mais recentes e promoções em destaque.
 
 <strong>Confirmação:</strong> A funcionalidade será confirmada quando:
+<ul>
 
-A cliente acessar a aba “Novidades da Semana” no site.
+<li>A cliente acessar a aba “Novidades da Semana” no site.</li>
 
-A cliente navegar pela seção.
+<li>A cliente navegar pela seção.</li>
+
+</ul>
 
 <a href="https://www.figma.com/proto/955Z53QYB7npK9rw6Ep1Ou/RiseUp-Atacado?node-id=84-6" alt="Novidades da Semana"> FIGMA:Novidades da Semana</a>
 
