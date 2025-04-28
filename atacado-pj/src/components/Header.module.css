@@ -1,0 +1,60 @@
+.header {
+    background: #fff;
+    padding: 20px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.topcontent {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .buttons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .btngreen, .btnred {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btngreen {
+    background-color: #78BE21;
+    color: #fff;
+  }
+  
+  .btngreen:hover {
+    background-color: #5aa018; /* Corrigido para verde escuro */
+  }
+  
+  .btnred {
+    background-color: #EE3124;
+    color: #fff;
+  }
+  
+  .btnred:hover {
+    background-color: #c9271d;
+  }
+  
+  .navmenu {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .navmenu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 550;
+  }
+  
+  .logo img {
+    width: 240px;
+  }

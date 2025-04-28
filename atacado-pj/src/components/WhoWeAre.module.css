@@ -1,0 +1,147 @@
+.container {
+    padding: 40px 20px;
+  }
+  
+  .intro-text {
+    text-align: center;
+    animation: fadeIn 2s ease;
+  }
+  
+  .main-title {
+    font-family: 'Merriweather', serif;
+    font-size: 36px;
+    color: #444;
+    font-style: italic;
+  }
+  
+  .highlight-box {
+    margin-top: 50px;
+    background: #f8f8f8;
+    padding: 50px;
+    border-left: 5px solid #78BE21;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: justify;
+  }
+  
+  .unidades {
+    margin-top: 80px;
+    text-align: center;
+  }
+  
+  .unidades-horizontal {
+    font-family: 'Merriweather', serif;
+    font-size: 32px;
+    color: #444;
+    margin-bottom: 30px;
+    font-style: italic;
+    animation: fadeIn 2s ease;
+  }
+  
+  .carousel-wrapper {
+    position: relative;
+    width: 90%;
+    max-width: 700px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 0 60px;
+    box-sizing: border-box;
+  }
+  
+  .carousel {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .carousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 3px solid #eee;
+  }
+  
+  .carousel-btn {
+    background: #78BE21;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 8px;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+  }
+  
+  .carousel-btn:hover {
+    background: #EE3124;
+  }
+  
+  .prev {
+    left: 10px;
+  }
+  
+  .next {
+    right: 10px;
+  }
+  
+  .encontre {
+    margin-top: 40px;
+  }
+  
+  .encontre h2 {
+    font-family: 'Merriweather', serif;
+    font-size: 30px;
+    color: #444;
+    font-style: italic;
+    animation: fadeIn 2s ease;
+  }
+  
+  .cafe {
+    margin: 80px 60px;
+    background: #f8f8f8;
+    padding: 40px 20px;
+    border-radius: 12px;
+  }
+  
+  .cafe-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+  }
+  
+  .cafe-imagem img {
+    width: 350px;
+    border-radius: 12px;
+    border: 3px solid #eee;
+  }
+  
+  .cafe-texto {
+    max-width: 450px;
+    padding: 20px;
+    text-align: justify;
+    animation: fadeIn 2s ease;
+  }
+  
+  .cafe-texto h2 {
+    font-family: 'Merriweather', serif;
+    font-size: 30px;
+    font-style: italic;
+    color: #444;
+    margin-bottom: 15px;
+  }
