@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react';
 import styles from './WhoWeAre.module.css';
-import Atacado1 from '../assets/Atacado1.jfif';
-import Atacado2 from '../assets/atacado2.jfif';
-import Atacado4 from '../assets/atacado4.jfif';
-import Atacado5 from '../assets/atacado5.jfif';
-import cafe from '../assets/cafemosteiro.jpg';
+import Atacado1 from '../../assets/Atacado1.jfif';
+import Atacado2 from '../../assets/atacado2.jfif';
+import Atacado4 from '../../assets/atacado4.jfif';
+import Atacado5 from '../../assets/atacado5.jfif';
+import cafe from '../../assets/cafemosteiro.jpg';
 
-export function WhoWeAre() {
+export default function WhoWeAre() {
   const images = [Atacado1, Atacado2, Atacado4, Atacado5];
   const [currentIndex, setCurrentIndex] = useState(0);
 

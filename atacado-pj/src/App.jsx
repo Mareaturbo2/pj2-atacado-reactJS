@@ -1,22 +1,16 @@
-import { Footer } from "./components/Footer";
-import { Header } from "./components/Header"
-import { WhoWeAre } from "./components/WhoWeAre";
-import "./global.css";
+import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
+import Header     from './components/Header/Header';
+import AppRoutes  from './routes/AppRoutes';
+import Footer     from './components/Footer/Footer';
+import './global.css';
 
-export function App() {
-  
-
+export default function App() {
   return (
-    <div>
-   <Header/>
-   <div>
-    <WhoWeAre/>
-    <div>
-    <Footer />
-    </div>
-   </div>
-   </div>
-  )
+    <BrowserRouter>
+      <Header />
+      <AppRoutes />
+      <Footer />
+    </BrowserRouter>
+  );
 }
-
-

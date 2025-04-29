@@ -1,0 +1,65 @@
+.buttons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .btn-green, .btn-red {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-green {
+    background-color: #78BE21;
+    color: #fff;
+  }
+  
+  .btn-green:hover {
+    background-color: #5aa018; /* Corrigido para verde escuro */
+  }
+
+  .criar-lista {
+    margin: 60px auto;
+    max-width: 800px;
+    text-align: center;
+  }
+  
+  .criar-lista h2 {
+    font-family: 'Merriweather', serif;
+    font-size: 28px;
+    font-style: italic;
+    color: #444;
+    margin-bottom: 20px;
+  }
+  
+  .criar-lista p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 30px;
+  }
+  
+  .listas-criadas {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .btn-lista {
+    padding: 6px 14px;
+    border: none;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    background-color: #EE3124;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-lista:hover {
+    background-color: #78BE21;
+  }

@@ -1,0 +1,52 @@
+.assistente-section {
+    margin: 80px auto;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .assistente-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+  
+  .assistente-imagem img {
+    width: 600px; /* aumentei o tamanho */
+    height: auto; /* mantém proporção correta */
+    border: none; /* sem borda */
+    border-radius: 12px; /* canto arredondado suave, pode tirar se quiser */
+    object-fit: cover;
+  }
+  
+  .assistente-texto h2 {
+    font-family: 'Merriweather', serif;
+    font-size: 28px;
+    font-style: italic;
+    color: #444;
+  }
+  
+  .assistente-texto p {
+    font-size: 18px;
+    color: #555;
+    margin: 20px 0;
+  }
+  
+  /* Estilo para o botão "Fale com o Tacadinho" */
+  .btn-tacadinho {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #78BE21; /* Verde */
+    color: white;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-tacadinho:hover {
+    background-color: #EE3124; /* Vermelho */
+  }
+  
+ 
