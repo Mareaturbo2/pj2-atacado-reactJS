@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import styles from './WhoWeAre.module.css';
-import Atacado1 from '../../assets/Atacado1.jfif';
+import Atacado1 from '../../assets/atacado1.jfif';
 import Atacado2 from '../../assets/atacado2.jfif';
 import Atacado4 from '../../assets/atacado4.jfif';
 import Atacado5 from '../../assets/atacado5.jfif';
