@@ -4,6 +4,7 @@ import Home      from '../pages/Home/Home';
 import List      from '../pages/Listas/List';
 import Product   from '../pages/Produtos/Product';
 import WhoWeAre  from '../pages/QuemSomos/WhoWeAre';
+import ChatBot from '../pages/Tacadinho/ChatBot';
 
 export default function AppRoutes() {
   return (
@@ -12,6 +13,7 @@ export default function AppRoutes() {
       <Route path="/listas"      element={<List />} />
       <Route path="/produtos"    element={<Product />} />
       <Route path="/quem-somos"  element={<WhoWeAre />} />
+      <Route path='/chat-bot'    element={<ChatBot />} />
       <Route path="*"            element={<Home />} />  {/* fallback */}
     </Routes>
   );
