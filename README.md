@@ -34,6 +34,11 @@
 ![image](https://github.com/user-attachments/assets/2e67b761-d857-41f5-96d6-8a10f5d6588e)
 
 
+<h2>ISSUE TRACKER</h2>
+![image](https://github.com/user-attachments/assets/196bc46e-45d1-4c5d-90d0-5411b6663151)
+
+
+
 ********************************************************************************************
 
 <h2>SCREENPLAY:</h2>
