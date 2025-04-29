@@ -5,7 +5,7 @@ import TacadinhoOi from '../../assets/tacadinhooi.png'
 const respostas = [
   { keywords: ["casamento"], resposta: "🎁 Para casamento, sugerimos conjuntos de jantar, eletrodomésticos ou itens de decoração elegante!" },
   { keywords: ["aniversário"], resposta: "🎂 Para aniversário: perfumes, relógios, roupas estilosas ou acessórios como bolsas e carteiras!" },
-  { keywords: ["dia das mães", "mãe"], resposta: "💐 Para o Dia das Mães: flores, joias, perfumes, kits de spa ou bolsas sofisticadas!" },
+  { keywords: ["dia das mães", "mãe","mae"], resposta: "💐 Para o Dia das Mães: flores, joias, perfumes, kits de spa ou bolsas sofisticadas!" },
   { keywords: ["amigo secreto", "amigo oculto"], resposta: "🎁 Para amigo secreto: canecas personalizadas, chocolates, fones de ouvido ou kits de beleza." },
   { keywords: ["dia dos pais", "pai"], resposta: "🎉 Para o Dia dos Pais: carteiras, kits de churrasco, relógios." },
   { keywords: ["natal"], resposta: "🎄 No Natal temos roupas, eletrônicos, brinquedos, kits de beleza e muito mais!" },
@@ -32,8 +32,8 @@ const respostas = [
   { keywords: ["tchau", "adeus"], resposta: "👋 Tchau! Esperamos vê-lo novamente em breve!" }
 ];
 
-const ChatBot = () => {
-  const [isOpen, setIsOpen] = useState(false);
+const ChatBot = ({ isOpen, setIsOpen }) => {
+  
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState('');
   const messagesEndRef = useRef(null);
@@ -82,12 +82,17 @@ const ChatBot = () => {
   };
 
   return (
-    <main>
-      <button id="chatButton" onClick={toggleChat}>💬</button>
+    <div>
+      <button id="chatButton" onClick={() => setIsOpen(!isOpen)}>💬</button>
 
       {isOpen && (
         <div id="chatContainer" style={{ display: 'flex' }}>
-          <div id="chatHeader">Tacadinho</div>
+        <div id="chatHeader">
+              Tacadinho
+              <button id="minimizeButton" onClick={toggleChat} aria-label="Minimizar chat">
+              &#x25BC;
+              </button>
+        </div>
           <div id="messages">
             {messages.map((msg, idx) => (
               <div key={idx} className={`message ${msg.type}`}>
@@ -113,7 +118,7 @@ const ChatBot = () => {
           </div>
         </div>
       )}
-    </main>
+    </div>
   );
 };
 
