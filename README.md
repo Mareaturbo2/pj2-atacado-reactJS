@@ -308,7 +308,7 @@ para que as pessoas possam escolher itens e presentear a minha filha que está p
 
 <li>O cliente puder copiar e colar o código durante o checkout para aplicar o desconto</li>
 
-</ul>
+</ul>   
 
 <a href="https://www.figma.com/proto/955Z53QYB7npK9rw6Ep1Ou/RiseUp-Atacado?node-id=91-16" alt="Ofertas Exclusivas"> FIGMA:Ofertas Exclusivas</a>
 
