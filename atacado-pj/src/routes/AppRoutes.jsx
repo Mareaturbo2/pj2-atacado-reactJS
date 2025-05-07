@@ -7,6 +7,9 @@ import WhoWeAre from '../pages/QuemSomos/WhoWeAre';
 import NotFound from '../pages/NotFound/Notfound';
 import CafeMosteiro from '../pages/CafeMosteiro/CafeMosteiro';
 import QuemSomos from '../pages/QuemSomos/QuemSomos';
+import Login from '../pages/Login/Login';
+import FaleConosco from '../pages/FaleConosco/FaleConosco';
+import UserProfile from '../pages/UserProfile/UserProfile';
 
 export default function AppRoutes({ abrirChat }) {
   return (
@@ -17,6 +20,11 @@ export default function AppRoutes({ abrirChat }) {
       <Route path="/quem-somos"  element={<QuemSomos abrirChat={abrirChat} />} />
       <Route path="/cafemosteiro"  element={<CafeMosteiro abrirChat={abrirChat} />} />
       <Route path="*"            element={<NotFound abrirChat={abrirChat} />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/fale-conosco" element={<FaleConosco />} />
+      <Route path="/UserProfile" element={<UserProfile />} />
+      
+      
     </Routes>
   );
 }
