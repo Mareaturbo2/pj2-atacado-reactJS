@@ -1,0 +1,43 @@
+.linha {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  
+}
+
+.textoEsquerda,
+.textoDireita {
+  flex: 1;
+}
+
+.titulo {
+  font-size: 2rem;
+  font-family: 'Merriweather', serif;
+  font-style: italic;
+  color: #000000A6 ;
+  line-height: 1.4;
+  text-align: left;
+}
+
+.subtitulo {
+  margin-top: 1rem;
+  font-size: 1rem;
+  font-family: 'Merriweather', serif;
+  color: #000000A6 65%;
+  line-height: 1.4;
+  text-align: left;
+}
+
+.paragrafo {
+  font-family: 'Merriweather', serif;
+  font-style: italic;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #000000A6 ;
+  line-height: 1.7;
+  text-align: left;
+}
