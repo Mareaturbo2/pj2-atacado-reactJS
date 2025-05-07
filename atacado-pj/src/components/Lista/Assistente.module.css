@@ -13,10 +13,10 @@
   }
   
   .assistente-imagem img {
-    width: 600px; /* aumentei o tamanho */
-    height: auto; /* mantém proporção correta */
-    border: none; /* sem borda */
-    border-radius: 12px; /* canto arredondado suave, pode tirar se quiser */
+    width: 600px;
+    height: auto; 
+    border: none; 
+    border-radius: 12px; 
     object-fit: cover;
   }
   
@@ -33,20 +33,20 @@
     margin: 20px 0;
   }
   
-  /* Estilo para o botão "Fale com o Tacadinho" */
+  
   .btn-tacadinho {
     padding: 10px 20px;
     border: none;
     border-radius: 30px;
     font-weight: bold;
     cursor: pointer;
-    background-color: #78BE21; /* Verde */
+    background-color: #78BE21; 
     color: white;
     transition: background-color 0.3s ease;
   }
   
   .btn-tacadinho:hover {
-    background-color: #EE3124; /* Vermelho */
+    background-color: #EE3124;
   }
   
  

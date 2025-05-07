@@ -34,6 +34,11 @@
 ![image](https://github.com/user-attachments/assets/2e67b761-d857-41f5-96d6-8a10f5d6588e)
 
 
+<h2>ISSUE TRACKER</h2>
+![image](https://github.com/user-attachments/assets/196bc46e-45d1-4c5d-90d0-5411b6663151)
+
+
+
 ********************************************************************************************
 
 <h2>SCREENPLAY:</h2>
@@ -336,7 +341,13 @@ para que as pessoas possam escolher itens e presentear a minha filha que está p
 [Acessar o documento completo](https://docs.google.com/document/d/1syU3MjNj9DxzxpG6RZ_mC1EVPcyZ9ONYHr6nJMOCP1s/edit?tab=t.0)
 
 ********************************************************************************************
+<<<<<<< HEAD
 
 
+=======
+# Diagram de Atividades 
+
+[Acessar o documento completo](https://drive.google.com/drive/folders/0APd2fcGqByDWUk9PVA)
+>>>>>>> ec59c3043daac971030da62f099faaa4a38eccb1
 
 

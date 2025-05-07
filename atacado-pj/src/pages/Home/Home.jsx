@@ -1,10 +1,9 @@
 import React from 'react';
-import './Home.css'; // vamos usar CSS externo para melhor organização
+import './Home.css'; 
 
 export default function Home() {
   return (
     <main className="home-container">
-      {/* Seção Principal */}
       <section className="hero">
         <div className="hero-image">
           <img src="/images/hero-img.png" alt="Mulher usando celular" />
@@ -25,7 +24,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Seção de Etapas */}
       <section className="steps">
         <div className="step">
           <img src="/images/step1.png" alt="Conheça o nosso site" />
@@ -45,7 +43,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Seção de Destaques */}
       <section className="highlights">
         <div className="highlight">
           <h2>Novidades da semana</h2>
