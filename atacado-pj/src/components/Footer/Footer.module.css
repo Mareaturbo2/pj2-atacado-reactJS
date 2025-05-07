@@ -2,8 +2,10 @@
   background-color: #78BE21;
   color: white;
   text-align: center;
-  padding: 20px 10px;
+  padding: 1rem;
   font-size: 14px;
   font-weight: 400;
-  box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  
+  
 }

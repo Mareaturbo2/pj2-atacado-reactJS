@@ -6,7 +6,7 @@ export default function QuemSomos() {
     <main>
       <section className={styles.linha}>
         
-        {/* Coluna da esquerda */}
+        
         <div className={styles.textoEsquerda}>
           <h2 className={styles.titulo}>
             Somos uma rede de <br />
@@ -22,7 +22,7 @@ export default function QuemSomos() {
           </p>
         </div>
 
-        {/* Coluna da direita */}
+        
         <div className={styles.textoDireita}>
           <p className={styles.paragrafo}>
             O Atacado dos Presentes é reconhecido pela variedade, <br />

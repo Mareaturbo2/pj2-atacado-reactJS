@@ -11,10 +11,14 @@ export default function App() {
 
   return (
     <BrowserRouter>
-      <Header />
+  <div className="app-container">
+    <Header />
+    <div className="content">
       <AppRoutes abrirChat={() => setMostrarChat(true)} />
-      <Footer />
-      <ChatBot isOpen={mostrarChat} setIsOpen={setMostrarChat} />
-    </BrowserRouter>
+    </div>
+    <Footer />
+    <ChatBot isOpen={mostrarChat} setIsOpen={setMostrarChat} />
+  </div>
+</BrowserRouter>
   );
 }
