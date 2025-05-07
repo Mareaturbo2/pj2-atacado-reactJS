@@ -6,6 +6,8 @@ import Atacado2 from '../../assets/atacado2.jfif';
 import Atacado4 from '../../assets/atacado4.jfif';
 import Atacado5 from '../../assets/atacado5.jfif';
 import cafe from '../../assets/cafemosteiro.jpg';
+import bkverde from './assets/bckgrnd-verde.svg'
+import bolv from './assets/Detalhe.svg'
 
 export default function QuemSomos() {
   const images = [Atacado1, Atacado2, Atacado4, Atacado5];
@@ -31,8 +33,8 @@ export default function QuemSomos() {
 
   return (
     <main>
-      <section className={styles.linha}>
-        
+      <section className={styles.linhaDois}>
+        <img className={styles.imgCanto} src={bkverde} alt="" />
         <div className={styles.textoEsquerda}>
           <h2 className={styles.titulo}>
             Somos uma rede de <br />
@@ -47,8 +49,8 @@ export default function QuemSomos() {
             clientes em cada detalhe.
           </p>
         </div>
-
-        
+    
+        <img className={styles.imgCantoDir} src={bolv} alt="" />
         <div className={styles.textoDireita}>
           <p className={styles.paragrafo}>
             O Atacado dos Presentes é reconhecido pela variedade, <br />
@@ -64,13 +66,10 @@ export default function QuemSomos() {
       </section>
 
       <br />
-      <br />
-      <br />
-      <br />
 
       <section className={styles.linha}>
         <div className={styles.textoEsquerda}>
-          <h2 className={styles.titulo}>
+          <h2 className={styles.tituloDois}>
           Estamos<br/> 
           Localizados<br/> 
           em toda RMR
@@ -95,7 +94,7 @@ export default function QuemSomos() {
 
      
         <div className={styles.textoDireita}>
-          <h2 className={styles.titulo}>
+          <h2 className={styles.tituloDois}>
             Encontre <br/>
             unidade<br/>
             mais proxima
