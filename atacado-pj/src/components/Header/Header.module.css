@@ -58,3 +58,13 @@
   .logo img {
     width: 240px;
   }
+  a.btngreen {
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+  }
+  a.btnred {
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+  }
