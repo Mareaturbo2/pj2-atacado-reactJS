@@ -8,8 +8,8 @@ export default function Header() {
     <header className={styles.header}>
       <div className={styles.topcontent}>
         <div className={styles.buttons}>
-          <button className={styles.btngreen}>Meu Perfil</button>
-          <button className={styles.btnred}  >Fale Conosco</button>
+          <NavLink to="/login" className={styles.btngreen}>Meu Perfil</NavLink>
+          <NavLink to="/fale-conosco" className={styles.btnred}>Fale Conosco</NavLink>
         </div>
         <nav className={styles.navmenu}>
           <NavLink to="/">Home</NavLink>
