@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './Login.css';
+import styles from './Login.module.css';
 
 export default function Login() {
   const [email, setEmail] = useState('');
@@ -17,8 +17,8 @@ export default function Login() {
   };
 
   return (
-    <div className="login-container">
-      <form className="login-box" onSubmit={handleLogin}>
+    <div className={styles['login-container']}>
+        <form className={styles['login-box']} onSubmit={handleLogin}>
         <h2>Seja bem vindo</h2>
         <input
           type="email"
@@ -35,7 +35,7 @@ export default function Login() {
           required
         />
         <button type="submit">Entrar</button>
-        <p className="login-help">
+        <p className={styles.loginHelp}>
           Não consegue entrar na sua conta? <a href="#">Recuperar senha</a>
         </p>
       </form>

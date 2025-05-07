@@ -4,7 +4,7 @@ body {
     padding: 0;
   }
   
-  #chatButton {
+  .chatButton {
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -20,7 +20,7 @@ body {
       }
   
   
-      #chatContainer {
+      .chatContainer {
         position: fixed;
         bottom: 80px;
         right: 20px;
@@ -34,7 +34,7 @@ body {
         z-index: 9999;
       }
   
-  #chatHeader {
+  .chatHeader {
   background-color: #78BE21;
   color: white;
   padding: 12px;
@@ -42,7 +42,7 @@ body {
   text-align: center;
 }
   
-  #messages {
+  .messages {
     flex: 1;
     padding: 10px;
     overflow-y: auto;
@@ -91,21 +91,21 @@ body {
     margin-right: 8px;
   }
   
-  #inputArea {
+  .inputArea {
     display: flex;
     padding: 10px;
     border-top: 1px solid #ddd;
     background: #fff;
   }
   
-  #userInput {
+  .userInput {
     flex: 1;
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 5px;
   }
   
-  #sendButton {
+  .sendButton {
     padding: 8px 12px;
     margin-left: 8px;
     background-color: #78BE21;
@@ -115,10 +115,10 @@ body {
     cursor: pointer;
   }
   
-  #sendButton:hover {
+  .sendButton:hover {
     background-color: #78BE21;
   }
-  #minimizeButton {
+  .minimizeButton {
       position: absolute;
       top: 8px;
       right: 10px;
@@ -129,7 +129,7 @@ body {
       cursor: pointer;
       transition: transform 0.2s ease;
   }
-  #minimizeButton:hover {
+  .minimizeButton:hover {
     transform: scale(1.2);
     color: #e0e0e0;
   }

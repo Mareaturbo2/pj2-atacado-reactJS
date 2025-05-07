@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
-import './ChatBot.css';
-import TacadinhoOi from '../../assets/tacadinhooi.png'
+import styles from './ChatBot.module.css';
+import TacadinhoOi from '../../assets/tacadinhooi.png';
 
 const respostas = [
   { keywords: ["casamento"], resposta: "🎁 Para casamento, sugerimos conjuntos de jantar, eletrodomésticos ou itens de decoração elegante!" },
@@ -33,7 +33,6 @@ const respostas = [
 ];
 
 const ChatBot = ({ isOpen, setIsOpen }) => {
-  
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState('');
   const messagesEndRef = useRef(null);
@@ -83,38 +82,38 @@ const ChatBot = ({ isOpen, setIsOpen }) => {
 
   return (
     <div>
-      <button id="chatButton" onClick={() => setIsOpen(!isOpen)}>💬</button>
+      <button className={styles.chatButton} onClick={() => setIsOpen(!isOpen)}>💬</button>
 
       {isOpen && (
-        <div id="chatContainer" style={{ display: 'flex' }}>
-        <div id="chatHeader">
-              Tacadinho
-              <button id="minimizeButton" onClick={toggleChat} aria-label="Minimizar chat">
+        <div className={styles.chatContainer}>
+          <div className={styles.chatHeader}>
+            Tacadinho
+            <button className={styles.minimizeButton} onClick={toggleChat} aria-label="Minimizar chat">
               &#x25BC;
-              </button>
-        </div>
-          <div id="messages">
+            </button>
+          </div>
+          <div className={styles.messages}>
             {messages.map((msg, idx) => (
-              <div key={idx} className={`message ${msg.type}`}>
+              <div key={idx} className={`${styles.message} ${styles[msg.type]}`}>
                 {msg.type === "bot" && (
-                  <img src={TacadinhoOi} alt="Bot" className="avatar" />
+                  <img src={TacadinhoOi} alt="Bot" className={styles.avatar} />
                 )}
-                <div className="bubble">{msg.text}</div>
+                <div className={styles.bubble}>{msg.text}</div>
               </div>
             ))}
             <div ref={messagesEndRef} />
           </div>
 
-          <div id="inputArea">
+          <div className={styles.inputArea}>
             <input
               type="text"
-              id="userInput"
+              className={styles.userInput}
               placeholder="Digite sua mensagem..."
               value={input}
               onChange={(e) => setInput(e.target.value)}
               onKeyDown={(e) => e.key === 'Enter' && handleSend()}
             />
-            <button id="sendButton" onClick={handleSend}>Enviar</button>
+            <button className={styles.sendButton} onClick={handleSend}>Enviar</button>
           </div>
         </div>
       )}
