@@ -1,11 +1,34 @@
-import React from 'react';
+
+import React, { useState, useEffect } from 'react';
 import styles from './QuemSomos.module.css'
+import Atacado1 from '../../assets/atacado1.jfif';
+import Atacado2 from '../../assets/atacado2.jfif';
+import Atacado4 from '../../assets/atacado4.jfif';
+import Atacado5 from '../../assets/atacado5.jfif';
 
 export default function QuemSomos() {
+  const images = [Atacado1, Atacado2, Atacado4, Atacado5];
+    const [currentIndex, setCurrentIndex] = useState(0);
+  
+    const prevSlide = () => {
+      setCurrentIndex((prevIndex) =>
+        prevIndex === 0 ? images.length - 1 : prevIndex - 1
+      );
+    };
+  
+    const nextSlide = () => {
+      setCurrentIndex((prevIndex) =>
+        (prevIndex + 1) % images.length
+      );
+    };
+  
+    useEffect(() => {
+      const interval = setInterval(nextSlide, 5000);
+      return () => clearInterval(interval);
+    }, []);
   return (
     <main>
       <section className={styles.linha}>
-        
         
         <div className={styles.textoEsquerda}>
           <h2 className={styles.titulo}>
@@ -35,6 +58,47 @@ export default function QuemSomos() {
           </p>
         </div>
 
+      </section>
+      <br />
+      <br />
+      <br />
+      <br />
+
+      <section className={styles.linha}>
+        <div className={styles.textoEsquerda}>
+          <h2 className={styles.titulo}>
+          Estamos<br/> 
+          Localizados<br/> 
+          em toda RMR
+          </h2>
+        </div>
+
+        <div className={styles['carousel-wrapper']}>
+                <button className={`${styles['carousel-btn']} ${styles.prev}`} onClick={prevSlide}>
+                  ❮
+                </button>
+        
+                  <div className={styles.carousel}>
+                    <img
+                      src={images[currentIndex]}
+                      alt={`Unidade ${currentIndex + 1}`}
+                    />
+                  </div>
+                  <button className={`${styles['carousel-btn']} ${styles.next}`} onClick={nextSlide}>
+                  ❯
+                </button>
+                </div>
+
+     
+        <div className={styles.textoDireita}>
+          <h2 className={styles.titulo}>
+            Encontre <br/>
+            unidade<br/>
+            mais proxima
+
+          </h2>
+        </div>
+        
       </section>
     </main>
   );
