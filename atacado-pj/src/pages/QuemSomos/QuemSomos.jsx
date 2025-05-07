@@ -5,6 +5,7 @@ import Atacado1 from '../../assets/atacado1.jfif';
 import Atacado2 from '../../assets/atacado2.jfif';
 import Atacado4 from '../../assets/atacado4.jfif';
 import Atacado5 from '../../assets/atacado5.jfif';
+import cafe from '../../assets/cafemosteiro.jpg';
 
 export default function QuemSomos() {
   const images = [Atacado1, Atacado2, Atacado4, Atacado5];
@@ -26,6 +27,8 @@ export default function QuemSomos() {
       const interval = setInterval(nextSlide, 5000);
       return () => clearInterval(interval);
     }, []);
+
+
   return (
     <main>
       <section className={styles.linha}>
@@ -59,6 +62,7 @@ export default function QuemSomos() {
         </div>
 
       </section>
+
       <br />
       <br />
       <br />
@@ -100,6 +104,39 @@ export default function QuemSomos() {
         </div>
         
       </section>
+
+      <section className={styles.linha}>
+        <div className={styles.textoEsquerda}>
+          <h2 className={styles.titulo}>
+            Conheça tambem o <br/>
+            Cafe Mosteiro
+          </h2>
+          <div className={styles['cafe-imagem']}>
+          <img src={cafe} alt="Cafe Mosteiro" />
+          <p className={styles['subtitulo-cafe']}>
+            Um ambiente acolhedor e único, onde você
+            pode <br/>
+            saborear delicias que complentam
+            essa experiência
+          </p>
+          </div>
+        </div>
+        <div className={styles.textoDireita}>
+          <p className={styles.paragrafo}>
+            Seja no site ou na loja, nossa <br/>
+            missao é oferecer a<br/>
+            conveniência de encontrar<br/>
+            tudo o que você precisa em um<br/>
+            só lugar, com qualidade, preço justo<br/>
+            e o atendomento que você merece
+          </p>
+
+        </div>
+      </section>
+
+
+
+      
     </main>
   );
 }
