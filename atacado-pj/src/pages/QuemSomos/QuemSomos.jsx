@@ -9,6 +9,7 @@ import cafe from '../../assets/cafemosteiro.jpg';
 import bkverde from './assets/bckgrnd-verde.svg'
 import bkvermelho from './assets/bckgrnd-vermelho.svg'
 import bolv from './assets/Detalhe.svg'
+import bolVerde from './assets/Detalhe-Bolas_verdes.svg'
 
 export default function QuemSomos() {
   const images = [Atacado1, Atacado2, Atacado4, Atacado5];
@@ -126,17 +127,17 @@ export default function QuemSomos() {
         <section className={styles.linhaTres}>
         <div className={styles.textoDireita}>
         <p className={styles.paragrafo}>
-          <br />
-          <br />
           Seja no site ou na loja, nossa <br/>
           missão é oferecer a<br/>
           conveniência de encontrar<br/>
           tudo o que você precisa em um<br/>
           só lugar, com qualidade, preço justo<br/>
-          e o atendimento que você merece<br/>
+          e o atendimento que você merece
        </p>
         </div>
-          <img className={styles.imgCantoDir} src={bkvermelho} alt="Detalhe decorativo" />
+          <img className={styles.imgCantoDir} 
+          src={bkvermelho} 
+          alt="Detalhe decorativo" />
        </section>
       </section>
 
