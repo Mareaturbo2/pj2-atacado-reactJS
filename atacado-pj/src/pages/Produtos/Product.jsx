@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import styles from './Produtos.module.css';
-import { FaSearch } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
+import { FaSearch, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 
 const produtosMock = [
   { id: 1, nome: 'Pote Hermético', preco: 'R$ 24,90', imagem: '/images/pote1.png' },
@@ -74,18 +74,39 @@ export default function Produtos() {
         ))}
       </div>
       {vistos.length > 0 && (
-        <div className={styles.vistos}>
-          <h2>Vistos recentemente</h2>
-          <div className={styles.gridVistos}>
-            {vistos.map(produto => (
-              <div key={produto.id} className={styles.cardVisto}>
-                <img src={produto.imagem} alt={produto.nome} />
-                <p>{produto.nome}</p>
-              </div>
-            ))}
+  <div className={styles.vistos}>
+    <h2>Vistos recentemente</h2>
+
+    <div className={styles.carousel}>
+      <button className={styles.navButton} onClick={() => {
+        const ultimo = vistos[vistos.length - 1];
+        const restantes = vistos.slice(0, -1);
+        setVistos([ultimo, ...restantes]);
+        localStorage.setItem('vistos', JSON.stringify([ultimo, ...restantes]));
+      }}>
+        <FaChevronLeft />
+      </button>
+
+      <div className={styles.items}>
+        {vistos.map((produto, index) => (
+          <div key={index} className={styles.cardVisto}>
+            <img src={produto.imagem} alt={produto.nome} />
+            <p>{produto.nome}</p>
           </div>
-        </div>
-      )}
+        ))}
+      </div>
+
+      <button className={styles.navButton} onClick={() => {
+        const primeiro = vistos[0];
+        const restantes = vistos.slice(1);
+        setVistos([...restantes, primeiro]);
+        localStorage.setItem('vistos', JSON.stringify([...restantes, primeiro]));
+      }}>
+        <FaChevronRight />
+      </button>
+    </div>
+  </div>
+)}
 
     </main>
   );
