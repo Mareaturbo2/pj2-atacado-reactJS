@@ -7,6 +7,7 @@ import Atacado4 from '../../assets/atacado4.jfif';
 import Atacado5 from '../../assets/atacado5.jfif';
 import cafe from '../../assets/cafemosteiro.jpg';
 import bkverde from './assets/bckgrnd-verde.svg'
+import bkvermelho from './assets/bckgrnd-vermelho.svg'
 import bolv from './assets/Detalhe.svg'
 
 export default function QuemSomos() {
@@ -50,7 +51,7 @@ export default function QuemSomos() {
           </p>
         </div>
     
-        <img className={styles.imgCantoDir} src={bolv} alt="" />
+        
         <div className={styles.textoDireita}>
           <p className={styles.paragrafo}>
             O Atacado dos Presentes é reconhecido pela variedade, <br />
@@ -120,17 +121,23 @@ export default function QuemSomos() {
           </p>
           </div>
         </div>
-        <div className={styles.textoDireita}>
-          <p className={styles.paragrafo}>
-            Seja no site ou na loja, nossa <br/>
-            missao é oferecer a<br/>
-            conveniência de encontrar<br/>
-            tudo o que você precisa em um<br/>
-            só lugar, com qualidade, preço justo<br/>
-            e o atendomento que você merece
-          </p>
 
+
+        <section className={styles.linhaTres}>
+        <div className={styles.textoDireita}>
+        <p className={styles.paragrafo}>
+          <br />
+          <br />
+          Seja no site ou na loja, nossa <br/>
+          missão é oferecer a<br/>
+          conveniência de encontrar<br/>
+          tudo o que você precisa em um<br/>
+          só lugar, com qualidade, preço justo<br/>
+          e o atendimento que você merece<br/>
+       </p>
         </div>
+          <img className={styles.imgCantoDir} src={bkvermelho} alt="Detalhe decorativo" />
+       </section>
       </section>
 
 
