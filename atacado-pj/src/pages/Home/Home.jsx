@@ -1,7 +1,9 @@
 import React from 'react';
 import styles from './Home.module.css';
+import { useNavigate } from 'react-router-dom';
 
 export default function Home() {
+  const navigate = useNavigate()
   return (
     <main className={styles['home-container']}>
       <section className={styles.hero}>
@@ -18,7 +20,11 @@ export default function Home() {
             Atacado dos Presentes: a mesma confiança de sempre, agora com uma nova experiência.
           </p>
           <div className={styles['hero-buttons']}>
-            <button className={styles['btn-outline-green']}>Novidades</button>
+              <button
+                className={styles['btn-outline-green']}
+                onClick={() => navigate('/novidades')}>
+                  Novidades
+              </button>
             <button className={styles['btn-outline-red']}>Descontos</button>
           </div>
         </div>
