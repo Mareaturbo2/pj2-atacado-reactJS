@@ -25,7 +25,12 @@ export default function Home() {
                 onClick={() => navigate('/novidades')}>
                   Novidades
               </button>
-            <button className={styles['btn-outline-red']}>Descontos</button>
+              <button
+                    className={styles['btn-outline-red']}
+                    onClick={() => navigate('/descontos')}
+                  >
+                    Descontos
+              </button>
           </div>
         </div>
       </section>

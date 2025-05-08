@@ -1,0 +1,115 @@
+.container {
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  .subtitulo {
+    font-style: italic;
+    color: #666;
+    margin-bottom: 1rem;
+  }
+  
+  .searchSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1.5rem 0;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .searchBox {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    background: #f9f9f9;
+    min-width: 300px;
+  }
+  
+  .searchInput {
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 1rem;
+    margin-left: 0.5rem;
+    width: 100%;
+  }
+  
+  .searchIcon {
+    color: #888;
+  }
+  
+  .moreProducts {
+    background-color: white;
+    border: 2px solid #4CAF50;
+    color: red;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .carousel {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    justify-content: center;
+  }
+  
+  .navButton {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #aaa;
+  }
+  
+  .items {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: nowrap;
+  }
+  
+  .item {
+    text-align: center;
+  }
+  
+  .card {
+    width: 120px;
+    height: 120px;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+  }
+  
+  .vermelho {
+    background-color: #e53935;
+  }
+  
+  .verde {
+    background-color: #7cb342;
+  }
+  
+  .percent {
+    font-size: 1.8rem;
+  }
+  
+  .off {
+    font-size: 1rem;
+  }
+  
+  .label {
+    margin-top: 0.5rem;
+    font-style: italic;
+    color: #555;
+  }
+  

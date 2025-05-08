@@ -10,6 +10,8 @@ import Login from '../pages/Login/Login';
 import FaleConosco from '../pages/FaleConosco/FaleConosco';
 import UserProfile from '../pages/UserProfile/UserProfile';
 import Novidades from '../pages/Novidades/Novidades';
+import Desconto from '../pages/Desconto/Desconto';
+
 
 export default function AppRoutes({ abrirChat }) {
   return (
@@ -24,6 +26,7 @@ export default function AppRoutes({ abrirChat }) {
       <Route path="/fale-conosco" element={<FaleConosco />} />
       <Route path="/UserProfile" element={<UserProfile />} />
       <Route path="/novidades" element={<Novidades />} />
+      <Route path="/descontos" element={<Desconto />} />
       
     </Routes>
   );
