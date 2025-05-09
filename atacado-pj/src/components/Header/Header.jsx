@@ -1,15 +1,21 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import styles      from './Header.module.css';
-import LogoCMYK    from '../../assets/LogoCMYK.svg';
+import styles from './Header.module.css';
+import LogoCMYK from '../../assets/LogoCMYK.svg';
+import { useCarrinho } from '../../Carrinho/Carrinho';
 
 export default function Header() {
+  const { carrinho } = useCarrinho();
+
   return (
     <header className={styles.header}>
       <div className={styles.topcontent}>
         <div className={styles.buttons}>
           <NavLink to="/login" className={styles.btngreen}>Meu Perfil</NavLink>
           <NavLink to="/fale-conosco" className={styles.btnred}>Fale Conosco</NavLink>
+          <NavLink to="/carrinho" className={styles.btngreen}>
+            🛒 Carrinho ({carrinho.length})
+          </NavLink>
         </div>
         <nav className={styles.navmenu}>
           <NavLink to="/">Home</NavLink>

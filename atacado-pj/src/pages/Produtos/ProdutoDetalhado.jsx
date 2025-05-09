@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './ProdutoDetalhado.module.css';
 import { useParams, useNavigate } from 'react-router-dom';
-
+import { useCarrinho } from '../../Carrinho/Carrinho'; // importa o contexto
 
 const produtos = {
   'pote-hermetico': {
@@ -47,13 +47,14 @@ const produtos = {
   'modelo-wood': {
     nome: 'Modelo Wood - (03) Und –Marca Etc',
     preco: 'R$ 25,00',
-    imagem: '/images/talheres-madeira.jpg', 
+    imagem: '/images/talheres-madeira.jpg',
   },
 };
 
 export default function ProdutoDetalhado() {
   const { slug } = useParams();
   const navigate = useNavigate();
+  const { adicionarAoCarrinho } = useCarrinho(); // hook do carrinho
   const produto = produtos[slug];
 
   if (!produto) return <p>Produto não encontrado.</p>;
@@ -61,29 +62,35 @@ export default function ProdutoDetalhado() {
   return (
     <div className={styles.container}>
       <div className={styles.card}>
-            <div className={styles.arrow} onClick={() => navigate('/produtos')}>&laquo;</div>
-            
-            <div className={styles.left}>
-                <img src={produto.imagem} alt={produto.nome} />
-                <p className={styles.nome}>{produto.nome}</p>
-                <span className={styles.preco}>{produto.preco}</span>
-            </div>
+        <div className={styles.arrow} onClick={() => navigate('/produtos')}>&laquo;</div>
 
-            <div className={styles.right}>
-                <div className={styles.infoSection}>
-                <button className={styles.infoButton}>Informações sobre o produto ▸</button>
-                <button className={styles.infoButton}>Métodos de pagamento ▸</button>
-                <button className={styles.infoButton}>Informações de entrega ▸</button>
-                <button className={styles.infoButton}>Quantidade solicitada ▸</button>
-                </div>
+        <div className={styles.left}>
+          <img src={produto.imagem} alt={produto.nome} />
+          <p className={styles.nome}>{produto.nome}</p>
+          <span className={styles.preco}>{produto.preco}</span>
+        </div>
 
-                <div className={styles.actions}>
-                <button className={styles['btn-outline-green']}>Comprar Agora</button>
-                <button className={styles['btn-outline-red']}>Adicionar à lista</button>
-                </div>
-            </div>
-            </div>
+        <div className={styles.right}>
+          <div className={styles.infoSection}>
+            <button className={styles.infoButton}>Informações sobre o produto ▸</button>
+            <button className={styles.infoButton}>Métodos de pagamento ▸</button>
+            <button className={styles.infoButton}>Informações de entrega ▸</button>
+            <button className={styles.infoButton}>Quantidade solicitada ▸</button>
+          </div>
 
+          <div className={styles.actions}>
+            <button className={styles['btn-outline-green']}>Comprar Agora</button>
+            <button className={styles['btn-outline-red']}>Adicionar à lista</button>
+            {/* Botão novo: adicionar ao carrinho */}
+            <button
+              className={styles['btn-outline-green']}
+              onClick={() => adicionarAoCarrinho({ id: slug, ...produto })}
+            >
+              Adicionar ao Carrinho
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
