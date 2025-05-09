@@ -14,6 +14,17 @@ const produtosMock = [
   { id: 8, nome: 'Frigideira Inox', preco: 'R$ 79,90', imagem: '/images/frigideira.png' },
 ];
 
+const slugMap = {
+  1: 'pote-hermetico',
+  2: 'organizador-multiuso',
+  3: 'panela-antiaderente',
+  4: 'conjunto-de-potes',
+  5: 'escorredor-de-louca',
+  6: 'jogo-de-facas',
+  7: 'tabua-de-corte',
+  8: 'frigideira-inox',
+};
+
 export default function Produtos() {
   const [busca, setBusca] = useState('');
   const [vistos, setVistos] = useState([]);
@@ -28,6 +39,11 @@ export default function Produtos() {
     const atualizados = [produto, ...vistos.filter(p => p.id !== produto.id)].slice(0, 5);
     setVistos(atualizados);
     localStorage.setItem('vistos', JSON.stringify(atualizados));
+
+    const slug = slugMap[produto.id];
+    if (slug) {
+      navigate(`/produto/${slug}`);
+    }
   };
 
   return (
@@ -40,6 +56,7 @@ export default function Produtos() {
         </div>
         <img src="/images/banner-cozinha.png" alt="Cozinha com potes" className={styles.bannerImage} />
       </section>
+
       <div className={styles.headerSection}>
         <h1>Tudo num só lugar.</h1>
 
@@ -53,15 +70,16 @@ export default function Produtos() {
           />
         </div>
 
-          <div className={styles.buttons}>
-            <button onClick={() => navigate('/novidades')} className={styles['btn-outline-green']}>
-              Novidades
-            </button>
-            <button onClick={() => navigate('/descontos')} className={styles['btn-outline-red']}>
-              Descontos
-            </button>
-          </div>
+        <div className={styles.buttons}>
+          <button onClick={() => navigate('/novidades')} className={styles['btn-outline-green']}>
+            Novidades
+          </button>
+          <button onClick={() => navigate('/descontos')} className={styles['btn-outline-red']}>
+            Descontos
+          </button>
+        </div>
       </div>
+
       <div className={styles.grid}>
         {produtosMock
           .filter(p => p.nome.toLowerCase().includes(busca.toLowerCase()))
@@ -73,41 +91,40 @@ export default function Produtos() {
             </div>
         ))}
       </div>
+
       {vistos.length > 0 && (
-  <div className={styles.vistos}>
-    <h2>Vistos recentemente</h2>
+        <div className={styles.vistos}>
+          <h2>Vistos recentemente</h2>
+          <div className={styles.carousel}>
+            <button className={styles.navButton} onClick={() => {
+              const ultimo = vistos[vistos.length - 1];
+              const restantes = vistos.slice(0, -1);
+              setVistos([ultimo, ...restantes]);
+              localStorage.setItem('vistos', JSON.stringify([ultimo, ...restantes]));
+            }}>
+              <FaChevronLeft />
+            </button>
 
-    <div className={styles.carousel}>
-      <button className={styles.navButton} onClick={() => {
-        const ultimo = vistos[vistos.length - 1];
-        const restantes = vistos.slice(0, -1);
-        setVistos([ultimo, ...restantes]);
-        localStorage.setItem('vistos', JSON.stringify([ultimo, ...restantes]));
-      }}>
-        <FaChevronLeft />
-      </button>
+            <div className={styles.items}>
+              {vistos.map((produto, index) => (
+                <div key={index} className={styles.cardVisto}>
+                  <img src={produto.imagem} alt={produto.nome} />
+                  <p>{produto.nome}</p>
+                </div>
+              ))}
+            </div>
 
-      <div className={styles.items}>
-        {vistos.map((produto, index) => (
-          <div key={index} className={styles.cardVisto}>
-            <img src={produto.imagem} alt={produto.nome} />
-            <p>{produto.nome}</p>
+            <button className={styles.navButton} onClick={() => {
+              const primeiro = vistos[0];
+              const restantes = vistos.slice(1);
+              setVistos([...restantes, primeiro]);
+              localStorage.setItem('vistos', JSON.stringify([...restantes, primeiro]));
+            }}>
+              <FaChevronRight />
+            </button>
           </div>
-        ))}
-      </div>
-
-      <button className={styles.navButton} onClick={() => {
-        const primeiro = vistos[0];
-        const restantes = vistos.slice(1);
-        setVistos([...restantes, primeiro]);
-        localStorage.setItem('vistos', JSON.stringify([...restantes, primeiro]));
-      }}>
-        <FaChevronRight />
-      </button>
-    </div>
-  </div>
-)}
-
+        </div>
+      )}
     </main>
   );
 }
