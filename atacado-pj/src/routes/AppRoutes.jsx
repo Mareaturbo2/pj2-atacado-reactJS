@@ -13,6 +13,7 @@ import Novidades from '../pages/Novidades/Novidades';
 import Desconto from '../pages/Desconto/Desconto';
 import ProdutoDetalhado from '../pages/Produtos/ProdutoDetalhado';
 import Carrinho from '../pages/Carrinho/Carrinho';
+import VisualizarLista from '../pages/Listas/VisualizarLista';
 
 
 export default function AppRoutes({ abrirChat }) {
@@ -31,7 +32,7 @@ export default function AppRoutes({ abrirChat }) {
       <Route path="/descontos" element={<Desconto />} />
       <Route path="/produto/:slug" element={<ProdutoDetalhado />} />
       <Route path="/carrinho" element={<Carrinho />} />
-      
+      <Route path="/lista/:id" element={<VisualizarLista />} />
     
       
     </Routes>

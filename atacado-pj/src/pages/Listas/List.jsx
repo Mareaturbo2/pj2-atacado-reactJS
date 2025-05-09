@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import CriarLista from '../../components/Lista/CriarLista';
 import Assistente from '../../components/Lista/Assistente';
-import BuscarLista from '../../components/Lista/BuscarLista';
+import BuscarLista from "./BuscarLista";
 import ChatBot from '../Tacadinho/ChatBot';
 import styles from './List.module.css';
 

@@ -1,7 +1,8 @@
 import React from 'react';
 import styles from './ProdutoDetalhado.module.css';
 import { useParams, useNavigate } from 'react-router-dom';
-import { useCarrinho } from '../../Carrinho/Carrinho'; // importa o contexto
+import { useCarrinho } from '../../Carrinho/Carrinho'; 
+import { adicionarProdutoNaLista, obterUltimaListaCriada } from '../../utils/listas';
 
 const produtos = {
   'pote-hermetico': {
@@ -54,7 +55,7 @@ const produtos = {
 export default function ProdutoDetalhado() {
   const { slug } = useParams();
   const navigate = useNavigate();
-  const { adicionarAoCarrinho } = useCarrinho(); // hook do carrinho
+  const { adicionarAoCarrinho } = useCarrinho(); 
   const produto = produtos[slug];
 
   if (!produto) return <p>Produto não encontrado.</p>;
@@ -80,8 +81,31 @@ export default function ProdutoDetalhado() {
 
           <div className={styles.actions}>
             <button className={styles['btn-outline-green']}>Comprar Agora</button>
-            <button className={styles['btn-outline-red']}>Adicionar à lista</button>
-            {/* Botão novo: adicionar ao carrinho */}
+            
+            {/* Adicionar à lista usando a última lista criada */}
+            <button
+              className={styles['btn-outline-red']}
+              onClick={() => {
+                const ultimaLista = obterUltimaListaCriada();
+                if (!ultimaLista) {
+                  alert('Nenhuma lista foi criada ainda.');
+                  return;
+                }
+
+                const produtoParaSalvar = { id: slug, ...produto };
+                const sucesso = adicionarProdutoNaLista(ultimaLista.id, produtoParaSalvar);
+
+                if (sucesso) {
+                  alert(`Produto adicionado à lista "${ultimaLista.nome}" com sucesso!`);
+                } else {
+                  alert('Erro ao adicionar à lista.');
+                }
+              }}
+            >
+              Adicionar à lista
+            </button>
+
+            {/* Adicionar ao carrinho */}
             <button
               className={styles['btn-outline-green']}
               onClick={() => adicionarAoCarrinho({ id: slug, ...produto })}
