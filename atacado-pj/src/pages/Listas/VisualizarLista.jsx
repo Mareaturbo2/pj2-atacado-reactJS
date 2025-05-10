@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { obterListas, adicionarProdutoNaLista } from '../../utils/listas';
-import './VisualizarLista.css';
+import styles from './VisualizarLista.module.css';
 import { produtos as produtosData } from '../Produtos/produtosData';
 import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
@@ -113,7 +113,7 @@ export default function VisualizarLista() {
   }
 
   return (
-    <div className="lista-container" style={{ position: 'relative' }}>
+    <div className={styles['lista-container']}>
       {/* Botão PDF discreto */}
       <button
         onClick={exportarParaPDF}
@@ -133,50 +133,56 @@ export default function VisualizarLista() {
       </button>
 
       <div id="conteudo-pdf">
-        <h1>{lista.nome} <span className="lista-id">#{lista.id}</span></h1>
+        <h1>
+          {lista.nome}
+          <span className={styles['lista-id']}>#{lista.id}</span>
+        </h1>
 
-        <div className="top-bar">
+        <div className={styles['top-bar']}>
           <input
             type="text"
-            className="busca"
+            className={styles['busca']}
             placeholder="🔍 Buscar produto"
             value={busca}
             onChange={handleBuscaChange}
           />
-          <button className="btn-adicionar" onClick={handleAdicionarDireto}>
+          <button className={styles['btn-adicionar']} onClick={handleAdicionarDireto}>
             Adicionar à lista
           </button>
         </div>
 
         {sugestoes.length > 0 && (
-          <div className="sugestoes">
+          <div className={styles['sugestoes']}>
             {sugestoes.map((produto, idx) => (
               <div
                 key={idx}
-                className="card sugestao"
+                className={`${styles['card']} ${styles['sugestao']}`}
                 onClick={() => setBusca(produto.nome)}
                 style={{ cursor: 'pointer' }}
               >
                 <img src={produto.imagem} alt={produto.nome} />
-                <div className="info">
-                  <p className="nome">{produto.nome}</p>
-                  <p className="preco">{produto.preco}</p>
+                <div className={styles['info']}>
+                  <p className={styles['nome']}>{produto.nome}</p>
+                  <p className={styles['preco']}>{produto.preco}</p>
                 </div>
               </div>
             ))}
           </div>
         )}
 
-        <div className="produtos">
+        <div className={styles['produtos']}>
           {lista.produtos.map((produto, index) => (
-            <div className="item" key={index}>
+            <div className={styles['item']} key={index}>
               <img src={produto.imagem} alt={produto.nome} />
-              <div className="info">
-                <p className="nome">{produto.nome}</p>
-                <p className="descricao">Categoria | Utilidades</p>
-                <p className="preco">{produto.preco}</p>
+              <div className={styles['info']}>
+                <p className={styles['nome']}>{produto.nome}</p>
+                <p className={styles['descricao']}>Categoria | Utilidades</p>
+                <p className={styles['preco']}>{produto.preco}</p>
               </div>
-              <button className="remover" onClick={() => handleRemoverProduto(produto.id)}>
+              <button
+                className={styles['remover']}
+                onClick={() => handleRemoverProduto(produto.id)}
+              >
                 Remover
               </button>
             </div>
@@ -185,7 +191,7 @@ export default function VisualizarLista() {
       </div>
 
       <div style={{ marginTop: '1.5rem', display: 'flex', gap: '1rem' }}>
-        <button className="btn-excluir-lista" onClick={handleExcluirLista}>
+        <button className={styles['btn-excluir-lista']} onClick={handleExcluirLista}>
           🗑️ Excluir Lista
         </button>
       </div>

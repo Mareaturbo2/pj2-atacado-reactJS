@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import './FaleConosco.css';
-import { MapPin, MapPinned } from 'lucide-react'; 
+import styles from './FaleConosco.module.css';
+import { MapPin, MapPinned } from 'lucide-react';
 
 export default function FaleConosco() {
   const [form, setForm] = useState({ nome: '', email: '', assunto: '' });
@@ -16,8 +16,8 @@ export default function FaleConosco() {
   };
 
   return (
-    <div className="contato-container">
-      <div className="contato-infos">
+    <div className={styles['contato-container']}>
+      <div className={styles['contato-infos']}>
         <h2>Nossos contatos</h2>
         <ul>
           <li><MapPin color="red" /> Unidade São José – (81) 3424-5407</li>
@@ -27,7 +27,7 @@ export default function FaleConosco() {
         </ul>
       </div>
 
-      <form className="contato-form" onSubmit={handleSubmit}>
+      <form className={styles['contato-form']} onSubmit={handleSubmit}>
         <h2>Fale conosco</h2>
         <label>Nome completo:</label>
         <input type="text" name="nome" value={form.nome} onChange={handleChange} required />
