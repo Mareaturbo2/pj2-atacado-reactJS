@@ -3,6 +3,8 @@ import { useParams } from 'react-router-dom';
 import { obterListas, adicionarProdutoNaLista } from '../../utils/listas';
 import './VisualizarLista.css';
 import { produtos as produtosData } from '../Produtos/produtosData';
+import jsPDF from 'jspdf';
+import html2canvas from 'html2canvas';
 
 export default function VisualizarLista() {
   const { id } = useParams();
@@ -29,7 +31,6 @@ export default function VisualizarLista() {
     }
 
     const produto = resultados[0];
-
     const jaExiste = lista.produtos.some(p => p.id === produto.id);
     if (jaExiste) {
       alert("Este produto já está na lista.");
@@ -43,7 +44,6 @@ export default function VisualizarLista() {
         produtos: [...lista.produtos, produto],
       };
       setLista(novaLista);
-      
       setBusca('');
       setSugestoes([]);
     } else {
@@ -94,64 +94,100 @@ export default function VisualizarLista() {
     window.location.href = '/listas';
   };
 
+  const exportarParaPDF = () => {
+    const elemento = document.getElementById('conteudo-pdf');
+    if (!elemento) return;
+
+    html2canvas(elemento).then((canvas) => {
+      const imgData = canvas.toDataURL('image/png');
+      const pdf = new jsPDF('p', 'mm', 'a4');
+      const pdfWidth = pdf.internal.pageSize.getWidth();
+      const imgHeight = (canvas.height * pdfWidth) / canvas.width;
+      pdf.addImage(imgData, 'PNG', 0, 0, pdfWidth, imgHeight);
+      pdf.save(`${lista.nome || 'lista'}.pdf`);
+    });
+  };
+
   if (!lista) {
     return <p style={{ textAlign: 'center' }}>Lista não encontrada.</p>;
   }
 
   return (
-    <div className="lista-container">
-      <h1>{lista.nome} <span className="lista-id">#{lista.id}</span></h1>
-
-      <button className="btn-excluir-lista" onClick={handleExcluirLista}>
-        🗑️ Excluir Lista
+    <div className="lista-container" style={{ position: 'relative' }}>
+      {/* Botão PDF discreto */}
+      <button
+        onClick={exportarParaPDF}
+        title="Exportar PDF"
+        style={{
+          background: 'none',
+          border: 'none',
+          fontSize: '1.5rem',
+          cursor: 'pointer',
+          position: 'absolute',
+          top: '20px',
+          right: '20px',
+          opacity: 0.7
+        }}
+      >
+        📄
       </button>
 
-      <div className="top-bar">
-        <input
-          type="text"
-          className="busca"
-          placeholder="🔍 Buscar produto"
-          value={busca}
-          onChange={handleBuscaChange}
-        />
-        <button className="btn-adicionar" onClick={handleAdicionarDireto}>
-          Adicionar à lista
-        </button>
-      </div>
+      <div id="conteudo-pdf">
+        <h1>{lista.nome} <span className="lista-id">#{lista.id}</span></h1>
 
-      {sugestoes.length > 0 && (
-        <div className="sugestoes">
-          {sugestoes.map((produto, idx) => (
-            <div
-              key={idx}
-              className="card sugestao"
-              onClick={() => setBusca(produto.nome)}
-              style={{ cursor: 'pointer' }}
-            >
+        <div className="top-bar">
+          <input
+            type="text"
+            className="busca"
+            placeholder="🔍 Buscar produto"
+            value={busca}
+            onChange={handleBuscaChange}
+          />
+          <button className="btn-adicionar" onClick={handleAdicionarDireto}>
+            Adicionar à lista
+          </button>
+        </div>
+
+        {sugestoes.length > 0 && (
+          <div className="sugestoes">
+            {sugestoes.map((produto, idx) => (
+              <div
+                key={idx}
+                className="card sugestao"
+                onClick={() => setBusca(produto.nome)}
+                style={{ cursor: 'pointer' }}
+              >
+                <img src={produto.imagem} alt={produto.nome} />
+                <div className="info">
+                  <p className="nome">{produto.nome}</p>
+                  <p className="preco">{produto.preco}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
+
+        <div className="produtos">
+          {lista.produtos.map((produto, index) => (
+            <div className="item" key={index}>
               <img src={produto.imagem} alt={produto.nome} />
               <div className="info">
                 <p className="nome">{produto.nome}</p>
+                <p className="descricao">Categoria | Utilidades</p>
                 <p className="preco">{produto.preco}</p>
               </div>
+              <button className="remover" onClick={() => handleRemoverProduto(produto.id)}>
+                Remover
+              </button>
             </div>
           ))}
         </div>
-      )}
+      </div>
 
-      <div className="produtos">
-        {lista.produtos.map((produto, index) => (
-          <div className="item" key={index}>
-            <img src={produto.imagem} alt={produto.nome} />
-            <div className="info">
-              <p className="nome">{produto.nome}</p>
-              <p className="descricao">Categoria | Utilidades</p>
-              <p className="preco">{produto.preco}</p>
-            </div>
-            <button className="remover" onClick={() => handleRemoverProduto(produto.id)}>
-              Remover
-            </button>
-          </div>
-        ))}
+      <div style={{ marginTop: '1.5rem', display: 'flex', gap: '1rem' }}>
+        <button className="btn-excluir-lista" onClick={handleExcluirLista}>
+          🗑️ Excluir Lista
+        </button>
       </div>
     </div>
   );

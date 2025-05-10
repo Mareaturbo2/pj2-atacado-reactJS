@@ -3,6 +3,8 @@
   margin: 3rem auto;
   padding: 1rem;
   font-family: 'Segoe UI', sans-serif;
+  position: relative;
+  padding: 1rem;
 }
 
 .top-bar {
