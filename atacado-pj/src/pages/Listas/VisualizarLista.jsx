@@ -43,7 +43,7 @@ export default function VisualizarLista() {
         produtos: [...lista.produtos, produto],
       };
       setLista(novaLista);
-      alert(`"${produto.nome}" foi adicionado à lista.`);
+      
       setBusca('');
       setSugestoes([]);
     } else {

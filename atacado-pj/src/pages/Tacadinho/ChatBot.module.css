@@ -133,3 +133,20 @@ body {
     transform: scale(1.2);
     color: #e0e0e0;
   }
+  .visualizarListaBtn {
+  background: linear-gradient(90deg, #78BE21 0%, #5aa018 100%);
+  border: none;
+  padding: 10px 18px;
+  border-radius: 30px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 14px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.visualizarListaBtn:hover {
+  transform: scale(1.05);
+  background: linear-gradient(90deg, #6aad1e 0%, #4c8614 100%);
+}
