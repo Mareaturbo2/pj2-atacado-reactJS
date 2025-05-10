@@ -1,4 +1,4 @@
- /* Seção de Busca por Lista */
+ 
  .buscar-lista {
     margin: 60px auto;
     max-width: 800px;
@@ -61,5 +61,5 @@
   }
   
   .btn-green:hover {
-    background-color: #5aa018; /* Corrigido para verde escuro */
+    background-color: #5aa018; 
   }

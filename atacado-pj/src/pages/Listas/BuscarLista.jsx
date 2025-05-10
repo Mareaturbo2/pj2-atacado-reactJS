@@ -10,11 +10,13 @@ export default function BuscarLista() {
   const handleBuscar = () => {
     console.log('🔍 Buscando por:', busca);
     const listas = obterListas();
+    const termo = busca.trim().toLowerCase().replace(/^#/, '');
+
     const encontrada = listas.find(
       (lista) =>
-        lista.id === busca.trim() ||
-        lista.nome?.toLowerCase() === busca.trim().toLowerCase()
-    );
+        lista.id.toLowerCase() === termo ||
+        lista.nome?.toLowerCase() === termo
+        );
 
     if (encontrada) {
       console.log('✅ Lista encontrada:', encontrada);
