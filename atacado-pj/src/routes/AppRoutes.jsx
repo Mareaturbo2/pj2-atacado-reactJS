@@ -17,6 +17,8 @@ import VisualizarLista from '../pages/Listas/VisualizarLista';
 import MinhasListas from '../pages/Listas/MinhasListas';
 import Pedido from '../pages/Pedido/Pedido';
 import MeusPedidos from '../pages/MeusPedidos/MeusPedidos';
+import PedidoDetalhado from "../pages/MeusPedidos/PedidoDetalhado";
+
 
 export default function AppRoutes({ abrirChat }) {
   return (
@@ -38,6 +40,7 @@ export default function AppRoutes({ abrirChat }) {
       <Route path="/minhas-listas" element={<MinhasListas />} />
       <Route path="/pedido" element={<Pedido />} />
       <Route path="/meus-pedidos" element={<MeusPedidos />} />
+      <Route path="/pedido/:id" element={<PedidoDetalhado />} />
 
     
       

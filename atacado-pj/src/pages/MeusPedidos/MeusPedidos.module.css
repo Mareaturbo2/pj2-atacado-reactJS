@@ -94,3 +94,17 @@
 .preparacao {
   background-color: #ffa000;
 }
+.btn-detalhes {
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.4rem 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn-detalhes:hover {
+  background-color: #1258a7;
+}
