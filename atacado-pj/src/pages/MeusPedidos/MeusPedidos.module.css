@@ -1,0 +1,96 @@
+.container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.titulo {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.vazio {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #777;
+}
+
+.pedido {
+  background: #fff;
+  border-left: 5px solid #1976d2;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.cabecalho {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.status {
+  background: #e0f3e7;
+  color: #2e7d32;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+.total {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  color: #2e7d32;
+}
+
+.itens {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: #f9f9f9;
+  padding: 0.8rem;
+  border-radius: 8px;
+}
+
+.item img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.nome {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.preco {
+  font-size: 0.9rem;
+  color: #555;
+}
+.status {
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: white;
+}
+
+.entregue {
+  background-color: #4caf50;
+}
+
+.preparacao {
+  background-color: #ffa000;
+}

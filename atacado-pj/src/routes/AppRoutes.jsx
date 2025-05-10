@@ -16,6 +16,7 @@ import Carrinho from '../pages/Carrinho/Carrinho';
 import VisualizarLista from '../pages/Listas/VisualizarLista';
 import MinhasListas from '../pages/Listas/MinhasListas';
 import Pedido from '../pages/Pedido/Pedido';
+import MeusPedidos from '../pages/MeusPedidos/MeusPedidos';
 
 export default function AppRoutes({ abrirChat }) {
   return (
@@ -36,6 +37,7 @@ export default function AppRoutes({ abrirChat }) {
       <Route path="/lista/:id" element={<VisualizarLista />} />
       <Route path="/minhas-listas" element={<MinhasListas />} />
       <Route path="/pedido" element={<Pedido />} />
+      <Route path="/meus-pedidos" element={<MeusPedidos />} />
 
     
       

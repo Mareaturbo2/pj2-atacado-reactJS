@@ -22,6 +22,7 @@ export default function Header() {
           <NavLink to="/quem-somos">Quem Somos</NavLink>
           <NavLink to="/produtos">Produtos</NavLink>
           <NavLink to="/listas">Listas</NavLink>
+          <NavLink to="/meus-pedidos">Meus Pedidos</NavLink> 
           <NavLink to="/cafemosteiro">Cafe Mosteiro</NavLink>
         </nav>
         <div className={styles.logo}>
