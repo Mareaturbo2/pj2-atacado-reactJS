@@ -13,8 +13,19 @@ export const CarrinhoProvider = ({ children }) => {
     setCarrinho((prev) => prev.filter(p => p.id !== id));
   };
 
+  const limparCarrinho = () => {
+    setCarrinho([]); 
+  };
+
   return (
-    <CarrinhoContext.Provider value={{ carrinho, adicionarAoCarrinho, removerDoCarrinho }}>
+    <CarrinhoContext.Provider
+      value={{
+        carrinho,
+        adicionarAoCarrinho,
+        removerDoCarrinho,
+        limparCarrinho, 
+      }}
+    >
       {children}
     </CarrinhoContext.Provider>
   );

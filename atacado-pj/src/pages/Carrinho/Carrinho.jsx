@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { useCarrinho } from '../../Carrinho/Carrinho';
+import { useNavigate } from 'react-router-dom';
 import styles from './Carrinho.module.css';
 
 export default function Carrinho() {
   const { carrinho, removerDoCarrinho } = useCarrinho();
   const [busca, setBusca] = useState('');
+  const navigate = useNavigate();
 
   const carrinhoFiltrado = carrinho.filter((item) =>
     item.nome.toLowerCase().includes(busca.toLowerCase())
@@ -62,7 +64,14 @@ export default function Carrinho() {
       </div>
 
       <div className={styles['rodape']}>
-        <button className={styles['btn-finalizar']}>Finalizar Compra</button>
+        <button
+            className={styles['btn-finalizar']}
+            onClick={() => {
+              navigate('/pedido'); // redireciona
+            }}
+          >
+            Finalizar Compra
+        </button>
       </div>
     </div>
   );
