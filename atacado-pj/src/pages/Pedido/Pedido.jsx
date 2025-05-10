@@ -1,20 +1,32 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { useCarrinho } from '../../Carrinho/Carrinho';
-import { useNavigate } from 'react-router-dom';
 import styles from './Pedido.module.css';
 
 export default function Pedido() {
-  const { carrinho, limparCarrinho } = useCarrinho();
   const navigate = useNavigate();
+  const location = useLocation();
+  const { carrinho, endereco } = location.state || {};
+  const { limparCarrinho } = useCarrinho();
 
   const [pedidoId, setPedidoId] = useState('');
   const [prazoEntrega, setPrazoEntrega] = useState('');
-  const [itensPedido, setItensPedido] = useState([]);
   const [total, setTotal] = useState(0);
+  const pedidoCriadoRef = useRef(false); 
+  const carrinhoLimpo = useRef(false);   
 
   useEffect(() => {
-    const idGerado = 'ATC-' + Math.random().toString(36).substr(2, 8).toUpperCase();
-    setPedidoId(idGerado);
+    if (!carrinho || !endereco || carrinho.length === 0) {
+      alert('Informações do pedido incompletas.');
+      navigate('/');
+      return;
+    }
+
+    if (pedidoCriadoRef.current) return;
+    pedidoCriadoRef.current = true;
+
+    const id = 'ATC-' + Math.random().toString(36).substr(2, 8).toUpperCase();
+    setPedidoId(id);
 
     const dias = Math.floor(Math.random() * 3) + 3;
     setPrazoEntrega(`${dias} dias úteis`);
@@ -23,45 +35,55 @@ export default function Pedido() {
       const preco = parseFloat(item.preco.replace('R$', '').replace(',', '.'));
       return soma + preco;
     }, 0);
-
     setTotal(totalPedido);
-    setItensPedido(carrinho);
+
+    const dataEntrega = new Date();
+    dataEntrega.setDate(dataEntrega.getDate() + dias);
 
     const novoPedido = {
-      id: idGerado,
+      id,
       prazo: `${dias} dias úteis`,
       itens: carrinho,
       total: totalPedido,
-      data: new Date().toISOString(),
+      dataCompra: new Date().toISOString(),
+      dataEntrega: dataEntrega.toISOString(),
+      status: 'Em preparação',
+      endereco,
     };
 
     const pedidosAntigos = JSON.parse(localStorage.getItem('pedidos')) || [];
     localStorage.setItem('pedidos', JSON.stringify([novoPedido, ...pedidosAntigos]));
 
-    limparCarrinho?.();
-  }, []); 
+   
+    if (!carrinhoLimpo.current) {
+      limparCarrinho?.();
+      carrinhoLimpo.current = true;
+    }
+  }, [carrinho, endereco, navigate, limparCarrinho]);
 
   return (
     <div className={styles['pedido-container']}>
       <h1>✅ Pedido confirmado!</h1>
       <p className={styles['id-pedido']}>Pedido #{pedidoId}</p>
       <p className={styles['prazo']}>Entrega estimada: {prazoEntrega}</p>
+      <p className={styles['total']}>
+        Total pago: <strong>R$ {total.toFixed(2).replace('.', ',')}</strong>
+      </p>
+      <p className={styles['entrega']}>
+        📦 Entrega em: <strong>{endereco}</strong>
+      </p>
 
       <div className={styles['lista-produtos']}>
-        {itensPedido.map((item, index) => (
+        {carrinho.map((item, index) => (
           <div className={styles['item']} key={index}>
             <img src={item.imagem} alt={item.nome} />
             <div className={styles['info']}>
               <p className={styles['nome']}>{item.nome}</p>
-              <p className={styles['preco']}>Preço: {item.preco}</p>
+              <p className={styles['preco']}>{item.preco}</p>
             </div>
           </div>
         ))}
       </div>
-
-      <p className={styles['total']}>
-        Total pago: <strong>R$ {total.toFixed(2).replace('.', ',')}</strong>
-      </p>
 
       <p className={styles['mensagem']}>Obrigado por comprar conosco! 🎁</p>
 
