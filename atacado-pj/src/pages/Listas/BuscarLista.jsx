@@ -41,6 +41,8 @@ export default function BuscarLista() {
           placeholder="Digite o ID da lista"
           value={busca}
           onChange={(e) => setBusca(e.target.value)}
+          onKeyDown={(e) => {
+          if (e.key === 'Enter') handleBuscar();}}
         />
         <button className={styles['btn-green']} onClick={handleBuscar}>
           Buscar Lista
