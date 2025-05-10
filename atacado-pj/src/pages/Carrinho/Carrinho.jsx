@@ -1,11 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useCarrinho } from '../../Carrinho/Carrinho';
 import styles from './Carrinho.module.css';
 
 export default function Carrinho() {
   const { carrinho, removerDoCarrinho } = useCarrinho();
+  const [busca, setBusca] = useState('');
 
-  const total = carrinho.reduce((soma, item) => {
+  const carrinhoFiltrado = carrinho.filter((item) =>
+    item.nome.toLowerCase().includes(busca.toLowerCase())
+  );
+
+  const total = carrinhoFiltrado.reduce((soma, item) => {
     const preco = parseFloat(item.preco.replace('R$', '').replace(',', '.'));
     return soma + preco;
   }, 0);
@@ -18,14 +23,15 @@ export default function Carrinho() {
         type="text"
         placeholder="🔍 Buscar produto no carrinho"
         className={styles['campo-busca']}
-        disabled
+        value={busca}
+        onChange={(e) => setBusca(e.target.value)}
       />
 
-      {carrinho.length === 0 ? (
-        <p className={styles['vazio']}>O carrinho está vazio.</p>
+      {carrinhoFiltrado.length === 0 ? (
+        <p className={styles['vazio']}>Nenhum item encontrado.</p>
       ) : (
         <div className={styles['lista-itens']}>
-          {carrinho.map((item, index) => (
+          {carrinhoFiltrado.map((item, index) => (
             <div className={styles['item']} key={index}>
               <img src={item.imagem} alt={item.nome} />
               <div className={styles['info']}>
