@@ -62,3 +62,93 @@
   margin-top: 0.3rem;
   color: #444;
 }
+.lista-id {
+  font-size: 0.7em;
+  color: #666;
+  margin-left: 8px;
+}
+.sugestoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.card.sugestao {
+  border: 1px solid #ccc;
+  background: #f9f9f9;
+  padding: 0.5rem;
+  width: 180px;
+  text-align: center;
+}
+.top-bar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.btn-adicionar {
+  background-color: #e63946;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.card.sugestao {
+  border: 1px solid #ccc;
+  background: #f9f9f9;
+  padding: 0.5rem;
+  width: 180px;
+  text-align: center;
+  transition: background-color 0.2s;
+}
+
+.card.sugestao:hover {
+  background-color: #f1f1f1;
+}
+.item {
+  display: flex;
+  align-items: center;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 0.8rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+.item img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 1rem;
+}
+
+.descricao {
+  font-size: 0.8rem;
+  color: #777;
+  margin: 0.3rem 0;
+}
+
+.remover {
+  background: none;
+  border: none;
+  color: #c00;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+.btn-excluir-lista {
+  background-color: transparent;
+  color: #c00;
+  border: 1px solid #c00;
+  padding: 0.4rem 1rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  margin: 0.5rem 0 1.5rem 0;
+}
+
+.btn-excluir-lista:hover {
+  background-color: #fdd;
+}

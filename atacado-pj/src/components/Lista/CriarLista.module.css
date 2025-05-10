@@ -1,7 +1,11 @@
 .buttons {
-    display: flex;
-    gap: 10px;
-  }
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
   
   .btn-green, .btn-red {
     padding: 10px 20px;
@@ -18,7 +22,7 @@
   }
   
   .btn-green:hover {
-    background-color: #5aa018; /* Corrigido para verde escuro */
+    background-color: #5aa018; 
   }
 
   .criar-lista {

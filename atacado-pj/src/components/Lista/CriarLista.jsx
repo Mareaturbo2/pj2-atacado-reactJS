@@ -36,9 +36,18 @@ export default function CriarLista() {
         Escolha os itens desejados, personalize detalhes e compartilhe com amigos e familiares para
         facilitar a escolha do presente perfeito.
       </p>
-      <button className={styles['btn-green']} onClick={criarLista}>
-        + Criar Lista
-      </button>
+
+      <div className={styles['buttons']}>
+        <button className={styles['btn-green']} onClick={criarLista}>
+          + Criar Lista
+        </button>
+        <button
+          className={styles['btn-green']}
+          onClick={() => navigate('/minhas-listas')}
+        >
+          📂 Minhas Listas
+        </button>
+      </div>
 
       <div className={styles['listas-criadas']}>
         <button className={styles['btn-lista']}>Lista de Casamento</button>

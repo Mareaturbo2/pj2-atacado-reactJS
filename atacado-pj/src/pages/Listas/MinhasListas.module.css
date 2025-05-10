@@ -1,0 +1,143 @@
+.container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1rem;
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 2rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 1.5rem;
+  justify-items: center;
+}
+
+.card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.cardInterno {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  width: 100%;
+}
+
+.imagemProduto {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.info {
+  flex: 1;
+  text-align: left;
+}
+
+.info h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.2rem;
+}
+
+.info p {
+  margin: 0.2rem 0;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.botoes {
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+  margin-top: 0.5rem;
+  flex-wrap: wrap;
+}
+.btn-outline-green {
+  border: 2px solid #7cc043;
+  color: #7cc043;
+  background: transparent;
+  padding: 0.4rem 1.2rem;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-outline-green:hover {
+  background-color: #7cc043;
+  color: white;
+}
+
+.btn-outline-red {
+  border: 2px solid #ff3c2e;
+  color: #ff3c2e;
+  background: transparent;
+  padding: 0.4rem 1.2rem;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-outline-red:hover {
+  background-color: #ff3c2e;
+  color: white;
+}
+.cardInterno {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+  align-items: flex-start; 
+}
+
+.imagemProduto {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+  align-self: flex-start; 
+}
+
+.info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.info h2 {
+  margin: 0 0 0.4rem;
+  font-size: 1.1rem;
+}
+
+.info p {
+  margin: 0.2rem 0;
+  font-size: 0.9rem;
+  color: #444;
+}
+
+
+.detalhes {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
