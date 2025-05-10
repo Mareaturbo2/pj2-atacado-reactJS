@@ -2,6 +2,11 @@ import { useNavigate } from 'react-router-dom';
 import { obterListas, salvarListas } from '../../utils/listas';
 import styles from './CriarLista.module.css';
 
+import imgCasaNova from '../../assets/modelo_casa nova 1.png';
+import imgAniversario from '../../assets/modelo-aniversario 1.png';
+import imgCasamento from '../../assets/modelo_casamento 1.png';
+import imgBebe from '../../assets/chádebebe 1.png';
+
 export default function CriarLista() {
   const navigate = useNavigate();
 
@@ -49,11 +54,13 @@ export default function CriarLista() {
         </button>
       </div>
 
-      <div className={styles['listas-criadas']}>
-        <button className={styles['btn-lista']}>Lista de Casamento</button>
-        <button className={styles['btn-lista']}>Lista de Aniversário</button>
-        <button className={styles['btn-lista']}>Lista de Chá de Bebê</button>
-        <button className={styles['btn-lista']}>Lista de Formatura</button>
+      <h3 style={{ marginTop: '2rem', fontWeight: 'bold' }}>Modelos populares:</h3>
+
+      <div className={styles['galeriaModelos']}>
+        <img src={imgCasamento} alt="Modelo Casamento" />
+        <img src={imgAniversario} alt="Modelo Aniversário" />
+        <img src={imgBebe} alt="Modelo Chá de Bebê" />
+        <img src={imgCasaNova} alt="Modelo Casa Nova" />
       </div>
     </section>
   );
