@@ -1,70 +1,100 @@
 .header {
-    background: #fff;
-    padding: 1rem 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  background: #fff;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
+
 .topcontent {
-    display: flex;
-    width: 100%;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.btngreen, .btnred {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  white-space: nowrap;
+}
+
+.btngreen {
+  background-color: #78BE21;
+  color: #fff;
+}
+
+.btngreen:hover {
+  background-color: #5aa018; 
+}
+
+.btnred {
+  background-color: #EE3124;
+  color: #fff;
+}
+
+.btnred:hover {
+  background-color: #c9271d;
+}
+
+.navmenu {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.navmenu a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 550;
+}
+
+.logo img {
+  width: 240px;
+}
+
+a.btngreen, a.btnred {
+  text-decoration: none;
+  color: #fff;
+  display: inline-block;
+}
+
+
+@media (max-width: 768px) {
+  .topcontent {
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    gap: 1rem;
   }
-  
+
   .buttons {
-    display: flex;
+    justify-content: center;
+  }
+
+  .navmenu {
+    flex-direction: column;
+    align-items: center;
     gap: 10px;
   }
-  
-  .btngreen, .btnred {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 30px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .btngreen {
-    background-color: #78BE21;
-    color: #fff;
-  }
-  
-  .btngreen:hover {
-    background-color: #5aa018; 
-  }
-  
-  .btnred {
-    background-color: #EE3124;
-    color: #fff;
-  }
-  
-  .btnred:hover {
-    background-color: #c9271d;
-  }
-  
-  .navmenu {
-    display: flex;
-    gap: 20px;
-  }
-  
-  .navmenu a {
-    text-decoration: none;
-    color: #333;
-    font-weight: 550;
-  }
-  
+
   .logo img {
-    width: 240px;
+    width: 180px;
   }
-  a.btngreen {
-    text-decoration: none;
-    color: #fff;
-    display: inline-block;
+
+  .btngreen, .btnred {
+    width: 100%;
+    text-align: center;
   }
-  a.btnred {
-    text-decoration: none;
-    color: #fff;
-    display: inline-block;
-  }
+}
