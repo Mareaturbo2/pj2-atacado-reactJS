@@ -41,19 +41,19 @@ export default function Home() {
       <section className={styles.steps}>
           <div className={styles.step}>
             <img src={comput} alt="Conheça o nosso site" />
-            <p>Conheça o nosso site.</p>
+            <p className={styles.subt}>Conheça o nosso site.</p>
           </div>
           <div className={styles.step}>
             <img src="/images/step2.png" alt="Descubra nossas lojas" />
-            <p>Descubra nossas lojas.</p>
+            <p className={styles.subt}>Descubra nossas lojas.</p>
           </div>
           <div className={styles.step}>
             <img src="/images/step3.png" alt="Ofertas exclusivas" />
-            <p>Encontre ofertas exclusivas.</p>
+            <p className={styles.subt}>Encontre ofertas exclusivas.</p>
           </div>
           <div className={styles.step}>
             <img src="/images/step4.png" alt="Compre com comodidade" />
-            <p>Compre com comodidade.</p>
+            <p className={styles.subt}>Compre com comodidade.</p>
           </div>
         </section>
 

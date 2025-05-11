@@ -10,6 +10,7 @@ import bkverde from './assets/bckgrnd-verde.svg'
 import bkvermelho from './assets/bckgrnd-vermelho.svg'
 import bolv from './assets/Detalhe.svg'
 import bolVerde from './assets/Detalhe-Bolas_verdes.svg'
+import setavermelha from './assets/setavermelha.png'
 
 export default function QuemSomos() {
   const images = [Atacado1, Atacado2, Atacado4, Atacado5];
@@ -136,7 +137,7 @@ export default function QuemSomos() {
        </p>
         </div>
           <img className={styles.imgCantoDir} 
-          src={bkvermelho} 
+          src={setavermelha} 
           alt="Detalhe decorativo" />
        </section>
       </section>

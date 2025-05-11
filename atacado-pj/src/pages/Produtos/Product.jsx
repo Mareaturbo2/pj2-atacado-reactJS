@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import styles from './Produtos.module.css';
 import { useNavigate } from 'react-router-dom';
 import { FaSearch, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import coz from '../../assets/fotoatacado (4) 1.svg'
 
 const produtosMock = [
   { id: 1, nome: 'Pote Hermético', preco: 'R$ 24,90', imagem: '/images/pote1.png' },
@@ -49,14 +50,8 @@ export default function Produtos() {
   return (
     <main className={styles.container}>
       <section className={styles.banner}>
-        <div className={styles.bannerLeft}>
-          <div className={styles.vermelho}>
-            Encontre os melhores produtos<br />para montar a sua cozinha.
-          </div>
-        </div>
-        <img src="/images/banner-cozinha.png" alt="Cozinha com potes" className={styles.bannerImage} />
+        <img src={coz} alt="Cozinha com potes" className={styles.bannerImage} />
       </section>
-
       <div className={styles.headerSection}>
         <h1>Tudo num só lugar.</h1>
 
