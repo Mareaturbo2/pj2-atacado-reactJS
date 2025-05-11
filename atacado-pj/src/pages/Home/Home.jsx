@@ -1,6 +1,9 @@
 import React from 'react';
 import styles from './Home.module.css';
 import { useNavigate } from 'react-router-dom';
+import comput from './assets/comput.png'
+import bolverde from './assets/bolverde.svg'
+import bolvermelha from './assets/bolvermelha.svg'
 
 export default function Home() {
   const navigate = useNavigate()
@@ -37,16 +40,17 @@ export default function Home() {
 
       <section className={styles.steps}>
         <div className={styles.step}>
-          <img src="/images/step1.png" alt="Conheça o nosso site" />
           <p>Conheça o nosso site.</p>
+          <img src={comput} alt="Conheça o nosso site" />
         </div>
         <div className={styles.step}>
           <img src="/images/step2.png" alt="Descubra nossas lojas" />
           <p>Descubra nossas lojas.</p>
         </div>
         <div className={styles.step}>
-          <img src="/images/step3.png" alt="Ofertas exclusivas" />
           <p>Encontre ofertas exclusivas.</p>
+          <img src="/images/step3.png" alt="Ofertas exclusivas" />
+          
         </div>
         <div className={styles.step}>
           <img src="/images/step4.png" alt="Compre com comodidade" />

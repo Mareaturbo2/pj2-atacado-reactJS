@@ -28,4 +28,5 @@ html, body{
 nav{
     font-family: 'Roboto', serif;
     font-style:normal;
+    justify-content: center;
 }
