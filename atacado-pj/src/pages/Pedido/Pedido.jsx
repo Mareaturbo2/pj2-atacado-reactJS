@@ -25,6 +25,7 @@ export default function Pedido() {
     if (pedidoCriadoRef.current) return;
     pedidoCriadoRef.current = true;
 
+    // Gera ID e dados do pedido
     const id = 'ATC-' + Math.random().toString(36).substr(2, 8).toUpperCase();
     setPedidoId(id);
 
@@ -54,7 +55,23 @@ export default function Pedido() {
     const pedidosAntigos = JSON.parse(localStorage.getItem('pedidos')) || [];
     localStorage.setItem('pedidos', JSON.stringify([novoPedido, ...pedidosAntigos]));
 
-   
+    // 🔥 Remove os produtos da lista de origem
+    const idListaOrigem = localStorage.getItem('listaOrigem');
+    if (idListaOrigem) {
+      const listas = JSON.parse(localStorage.getItem('listas')) || [];
+      const index = listas.findIndex(l => l.id === idListaOrigem);
+      if (index !== -1) {
+        const idsComprados = carrinho.map(item => item.id);
+        const novaLista = {
+          ...listas[index],
+          produtos: listas[index].produtos.filter(p => !idsComprados.includes(p.id))
+        };
+        listas[index] = novaLista;
+        localStorage.setItem('listas', JSON.stringify(listas));
+      }
+      localStorage.removeItem('listaOrigem');
+    }
+
     if (!carrinhoLimpo.current) {
       limparCarrinho?.();
       carrinhoLimpo.current = true;

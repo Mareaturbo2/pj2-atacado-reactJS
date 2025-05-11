@@ -7,11 +7,6 @@ import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
 import { useCarrinho } from '../../Carrinho/Carrinho';
 
-
-
-
-
-
 export default function VisualizarLista() {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -138,7 +133,10 @@ export default function VisualizarLista() {
     );
 
     selecionadosProdutos.forEach(prod => adicionarAoCarrinho(prod));
-    
+
+    // Salva o ID da lista de origem
+    localStorage.setItem('listaOrigem', lista.id);
+
     setSelecionados([]);
   };
 
@@ -148,7 +146,6 @@ export default function VisualizarLista() {
 
   return (
     <div className={styles['lista-container']}>
-      {/* Botão PDF discreto */}
       <button
         onClick={exportarParaPDF}
         title="Exportar PDF"
@@ -231,13 +228,16 @@ export default function VisualizarLista() {
       </div>
 
       <div style={{ marginTop: '1.5rem', display: 'flex', gap: '1rem' }}>
-       <button
-                  onClick={handleAdicionarSelecionados}
-                  className={styles['btnAdicionarCarrinho']}
-                >
-                  🛒 Adicionar selecionados ao carrinho
+        <button
+          onClick={handleAdicionarSelecionados}
+          className={styles['btnAdicionarCarrinho']}
+        >
+          🛒 Adicionar selecionados ao carrinho
         </button>
-        <button className={styles['btn-excluir-lista']} onClick={handleExcluirLista}>
+        <button
+          className={styles['btn-excluir-lista']}
+          onClick={handleExcluirLista}
+        >
           🗑️ Excluir Lista
         </button>
       </div>
