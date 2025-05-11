@@ -80,9 +80,17 @@ export default function ProdutoDetalhado() {
           </div>
 
           <div className={styles.actions}>
-            <button className={styles['btn-outline-green']}>Comprar Agora</button>
+            <button
+  className={styles['btn-outline-green']}
+  onClick={() => {
+    adicionarAoCarrinho({ id: slug, ...produto });
+    navigate('/carrinho');
+  }}
+>
+  Comprar Agora
+</button>
             
-            {/* Adicionar à lista usando a última lista criada */}
+            
             <button
               className={styles['btn-outline-red']}
               onClick={() => {
@@ -105,7 +113,7 @@ export default function ProdutoDetalhado() {
               Adicionar à lista
             </button>
 
-            {/* Adicionar ao carrinho */}
+            
             <button
               className={styles['btn-outline-green']}
               onClick={() => adicionarAoCarrinho({ id: slug, ...produto })}
