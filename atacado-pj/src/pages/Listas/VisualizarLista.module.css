@@ -135,13 +135,48 @@
   background-color: transparent;
   color: #c00;
   border: 1px solid #c00;
-  padding: 0.4rem 1rem;
+  padding: 0.5rem 1.2rem;
   border-radius: 6px;
   font-size: 0.9rem;
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
   cursor: pointer;
-  margin: 0.5rem 0 1.5rem 0;
+  transition: background-color 0.3s ease;
 }
 
 .btn-excluir-lista:hover {
   background-color: #fdd;
 }
+
+.btnAdicionarCarrinho,
+.btn-excluir-lista {
+  height: 40px; 
+}
+
+.btnAdicionarCarrinho {
+  
+  background-color: #7cc417;
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: center;
+
+}
+
+.btnAdicionarCarrinho:hover {
+  background-color: #6ab013;
+}
+

@@ -1,16 +1,26 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import { obterListas, adicionarProdutoNaLista } from '../../utils/listas';
 import styles from './VisualizarLista.module.css';
 import { produtos as produtosData } from '../Produtos/produtosData';
 import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
+import { useCarrinho } from '../../Carrinho/Carrinho';
+
+
+
+
+
 
 export default function VisualizarLista() {
   const { id } = useParams();
+  const navigate = useNavigate();
+  const { adicionarAoCarrinho } = useCarrinho();
+
   const [lista, setLista] = useState(null);
   const [busca, setBusca] = useState('');
   const [sugestoes, setSugestoes] = useState([]);
+  const [selecionados, setSelecionados] = useState([]);
 
   useEffect(() => {
     const listas = obterListas();
@@ -80,6 +90,7 @@ export default function VisualizarLista() {
       )
     );
     setLista(novaLista);
+    setSelecionados(selecionados.filter(id => id !== produtoId));
   };
 
   const handleExcluirLista = () => {
@@ -106,6 +117,29 @@ export default function VisualizarLista() {
       pdf.addImage(imgData, 'PNG', 0, 0, pdfWidth, imgHeight);
       pdf.save(`${lista.nome || 'lista'}.pdf`);
     });
+  };
+
+  const handleSelecionar = (idProduto) => {
+    setSelecionados(prev =>
+      prev.includes(idProduto)
+        ? prev.filter(id => id !== idProduto)
+        : [...prev, idProduto]
+    );
+  };
+
+  const handleAdicionarSelecionados = () => {
+    if (selecionados.length === 0) {
+      alert("Nenhum item selecionado.");
+      return;
+    }
+
+    const selecionadosProdutos = lista.produtos.filter(p =>
+      selecionados.includes(p.id)
+    );
+
+    selecionadosProdutos.forEach(prod => adicionarAoCarrinho(prod));
+    
+    setSelecionados([]);
   };
 
   if (!lista) {
@@ -173,6 +207,12 @@ export default function VisualizarLista() {
         <div className={styles['produtos']}>
           {lista.produtos.map((produto, index) => (
             <div className={styles['item']} key={index}>
+              <input
+                type="checkbox"
+                checked={selecionados.includes(produto.id)}
+                onChange={() => handleSelecionar(produto.id)}
+                style={{ marginRight: '0.8rem' }}
+              />
               <img src={produto.imagem} alt={produto.nome} />
               <div className={styles['info']}>
                 <p className={styles['nome']}>{produto.nome}</p>
@@ -191,6 +231,12 @@ export default function VisualizarLista() {
       </div>
 
       <div style={{ marginTop: '1.5rem', display: 'flex', gap: '1rem' }}>
+       <button
+                  onClick={handleAdicionarSelecionados}
+                  className={styles['btnAdicionarCarrinho']}
+                >
+                  🛒 Adicionar selecionados ao carrinho
+        </button>
         <button className={styles['btn-excluir-lista']} onClick={handleExcluirLista}>
           🗑️ Excluir Lista
         </button>
