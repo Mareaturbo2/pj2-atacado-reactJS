@@ -38,14 +38,17 @@ const ChatBot = ({ isOpen, setIsOpen }) => {
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState('');
   const [ultimaLista, setUltimaLista] = useState(null);
+  const [ultimoPedido, setUltimoPedido] = useState(null);
   const messagesEndRef = useRef(null);
   const navigate = useNavigate();
 
   const toggleChat = () => setIsOpen(!isOpen);
 
   useEffect(() => {
-    window.__goToLista = (id) => {
-      navigate(`/lista/${id}`);
+  window.__goToLista = (id) => navigate(`/lista/${id}`);
+  window.__goToPedido = (idPedido) => {
+    navigate(`/pedido/${idPedido}`);
+  
     };
   }, [navigate]);
 
@@ -82,23 +85,61 @@ const ChatBot = ({ isOpen, setIsOpen }) => {
     const listas = obterListas();
     const msgLower = userMessage.toLowerCase().trim();
 
-    // Extrai ID no formato lista-xxxxxx com ou sem "#"
+    if (msgLower === "sim") {
+  if (ultimoPedido) {
+    navigate(`/pedido/${ultimoPedido.id}`);
+    return "🔁 Redirecionando para os detalhes do seu pedido...";
+  }
+      if (ultimaLista) {
+        navigate(`/lista/${ultimaLista.id}`);
+        return "🔁 Redirecionando para sua lista agora...";
+      }
+    }
+
+    const pedidoMatch = msgLower.match(/(atc-[a-z0-9]+)/i);
+    if (pedidoMatch) {
+      const idPedido = pedidoMatch[1].toUpperCase();
+      const pedidos = JSON.parse(localStorage.getItem('pedidos')) || [];
+      const pedido = pedidos.find(p => p.id.toLowerCase() === idPedido.toLowerCase());
+
+      if (pedido) {
+        setUltimoPedido(pedido);
+        setUltimaLista(null);
+        const itensHTML = pedido.itens.map(item => `- ${item.nome} (${item.preco})`).join('<br/>');
+
+        return `
+📦 <strong>Pedido #${idPedido}</strong> encontrado!
+
+🛒 <strong>${pedido.itens.length} item(s)</strong><br/>
+💰 <strong>Total:</strong> R$ ${pedido.total.toFixed(2).replace('.', ',')}<br/>
+🚚 <strong>Status:</strong> ${pedido.status}<br/>
+📍 <strong>Entrega:</strong> ${pedido.prazo}<br/>
+📬 <strong>Endereço:</strong> ${pedido.endereco}<br/><br/>
+<strong>Itens:</strong><br/>
+${itensHTML}<br/><br/>
+Deseja visualizar os <strong>detalhes completos do pedido</strong>?  
+Digite <strong>"sim"</strong> ou clique no botão abaixo:
+
+<div style="margin-top:12px;">
+  <button onclick="window.__goToPedido('${idPedido}')" style="background: linear-gradient(90deg, #1976d2 0%, #125ea6 100%); border: none; padding: 10px 18px; border-radius: 30px; color: white; font-weight: bold; cursor: pointer; font-size: 14px; box-shadow: 0 2px 6px rgba(0,0,0,0.2); transition: transform 0.2s ease, background 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+    🔎 Ver Detalhes do Pedido
+  </button>
+</div>
+`;
+      } else {
+        return `❌ Pedido com ID <strong>${idPedido}</strong> não encontrado.`;
+      }
+    }
+   
     const match = msgLower.match(/#?(lista-[a-z0-9]+)/i);
     const possívelId = match ? match[1] : msgLower;
 
-    if (possívelId === "sim" && ultimaLista) {
-      navigate(`/lista/${ultimaLista.id}`);
-      return "🔁 Redirecionando para sua lista agora...";
-    }
-
-    // Tenta encontrar lista pelo ID ou nome exato
     let encontrada = listas.find(
       (lista) =>
         lista.id.toLowerCase() === possívelId.toLowerCase() ||
         lista.nome.toLowerCase() === possívelId.toLowerCase()
     );
 
-    // Tenta por nome parcial dentro da frase
     if (!encontrada) {
       encontrada = listas.find((lista) =>
         msgLower.includes(lista.nome.toLowerCase())
@@ -107,6 +148,7 @@ const ChatBot = ({ isOpen, setIsOpen }) => {
 
     if (encontrada) {
       setUltimaLista(encontrada);
+      setUltimoPedido(null);
       return `
 🎉 Encontrei a lista <strong>${encontrada.nome}</strong>!
 
@@ -127,7 +169,7 @@ Ou digite: <strong>"Sim"</strong> para ser redirecionado agora.
       }
     }
 
-    return "🤔 Desculpe, não entendi. Pode perguntar sobre presentes, listas, lojas ou horários!";
+    return "🤔 Desculpe, não entendi. Pode perguntar sobre presentes, listas, pedidos, lojas ou horários!";
   };
 
   return (
@@ -142,6 +184,7 @@ Ou digite: <strong>"Sim"</strong> para ser redirecionado agora.
               &#x25BC;
             </button>
           </div>
+
           <div className={styles.messages}>
             {messages.map((msg, idx) => (
               <div key={idx} className={`${styles.message} ${styles[msg.type]}`}>
@@ -149,7 +192,7 @@ Ou digite: <strong>"Sim"</strong> para ser redirecionado agora.
                   <img src={TacadinhoOi} alt="Bot" className={styles.avatar} />
                 )}
                 <div className={styles.bubble}>
-                  <span dangerouslySetInnerHTML={{ __html: msg.text.replace(/\n/g, "<br/>") }} />
+                  <span dangerouslySetInnerHTML={{ __html: msg.text.replace(/\\n/g, "<br/>") }} />
                 </div>
               </div>
             ))}
