@@ -1,0 +1,146 @@
+.container {
+  text-align: center;
+  padding: 2rem;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.greenBar {
+  height: 10px;
+  background-color: #97c26b;
+  margin: 1rem 0;
+}
+
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.carousel img {
+  max-width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+  transition: opacity 0.5s ease-in-out;
+}
+
+
+.arrow {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.description {
+  margin-top: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.description h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.description p {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 1rem;
+}
+
+.cardapioButton {
+  padding: 0.5rem 1rem;
+  border: 1px solid #97c26b;
+  background: white;
+  color: red;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.cardapioButton:hover {
+  background: #f9f9f9;
+}
+
+.icon {
+  vertical-align: middle;
+}
+
+.footerBar {
+  height: 20px;
+  background: linear-gradient(to right, #97c26b 50%, #df4a40 50%);
+  margin-top: 2rem;
+}
+.carouselWrapper {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 0 3.75rem;
+  box-sizing: border-box;
+}
+
+.carousel {
+  width: 100%;
+  height: 25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 3px solid #eee;
+}
+
+.carouselBtn {
+  background: #78BE21;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 8px;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s;
+}
+
+.carouselBtn:hover {
+  background: #EE3124;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
