@@ -188,3 +188,44 @@
   flex-direction: column;
   gap: 0.8rem;
 }
+.infoBlock {
+  background: #f5f5f5;
+  padding: 1rem;
+  border-radius: 12px;
+  margin-bottom: 0.8rem;
+  font-size: 0.95rem;
+  color: #444;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+  transition: background 0.2s;
+}
+
+.infoBlock:hover {
+  background-color: #ebebeb;
+}
+
+.infoBlock summary {
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 0.95rem;
+  color: #333;
+  list-style: none;
+}
+
+.infoBlock[open] {
+  background-color: #eaeaea;
+}
+
+.infoBlock summary::marker {
+  display: none;
+}
+
+.infoBlock summary::after {
+  content: " ▼";
+  float: right;
+  font-size: 0.8rem;
+  color: #888;
+}
+
+.infoBlock[open] summary::after {
+  content: " ▲";
+}
