@@ -27,6 +27,11 @@
 
 ![image](https://github.com/user-attachments/assets/083c6833-65f6-4c9d-b0ec-c56e70a9c1c2)
 
+<h2>Final</h2>
+![image](https://github.com/user-attachments/assets/3d523320-11e6-45c7-a11b-71562c850e50)
+
+
+
 
 <h2>QUADRO DA SPRINT 01</h2>
 
