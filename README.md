@@ -33,6 +33,9 @@
 
 <h2>QUADRO DA SPRINT 03</h2>
 
+![image](https://github.com/user-attachments/assets/6bac20a3-0fea-492e-8481-12548959b5e6).
+
+
 
 
 <h2>ISSUE TRACKER</h2>
