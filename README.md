@@ -1,6 +1,6 @@
 # pj2-atacado-reactJS
 
-<img src="https://github.com/Mareaturbo2/pj2-atacado-reactJS/blob/main/atacado-site/src/assets/Logo%20CMYK%20-%20Atacado%20dos%20Presentes%20-%20Horizontal%201.svg" alt="Logo do atacado dos presentes">
+<img src="atacado-pj/src/assets/LogoCMYK.svg" alt="Logo do atacado dos presentes">
 
 
 <h2>PROJETO:</h2>                  Site Remodelado do Atacado dos Presentes.
