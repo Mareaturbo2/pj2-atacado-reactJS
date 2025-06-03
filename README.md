@@ -39,7 +39,8 @@
 
 
 <h2>ISSUE TRACKER</h2>
-![image](https://github.com/user-attachments/assets/196bc46e-45d1-4c5d-90d0-5411b6663151)
+![image](https://github.com/user-attachments/assets/66e85f72-0cfe-400d-b669-6205c454c234).
+
 
 
 
