@@ -348,16 +348,22 @@ para que as pessoas possam escolher itens e presentear a minha filha que está p
 ********************************************************************************************
 # Relatório sobre a Não Realização da Programação em Par
 
-[Acessar o documento completo](https://docs.google.com/document/d/1syU3MjNj9DxzxpG6RZ_mC1EVPcyZ9ONYHr6nJMOCP1s/edit?tab=t.0)
+<p>
+Nosso grupo não conseguiu realizar a programação em par conforme proposto, principalmente devido a dificuldades na conciliação de horários entre os integrantes. Alguns membros do grupo trabalham em período integral, o que limita bastante a disponibilidade para atividades em conjunto fora do expediente.
+Além disso, há integrantes que possuem compromissos familiares, como o cuidado com filhos, o que demanda flexibilidade e dificulta a participação em encontros síncronos. A diferença nos horários livres de cada integrante tornou inviável a realização de sessões conjuntas de programação.
+Diante disso, decidimos dividir as tarefas individualmente, permitindo que cada membro contribuísse com a parte que lhe cabia conforme sua disponibilidade. Apesar de não termos seguido a metodologia de programação em par, mantivemos uma comunicação constante para assegurar a colaboração mútua e a qualidade do trabalho final entregue.
+</p>
+
 
 ********************************************************************************************
-<<<<<<< HEAD
+
 
 
 =======
-# Diagram de Atividades 
+# Diagrama de Atividades 
 
-[Acessar o documento completo](https://drive.google.com/drive/folders/0APd2fcGqByDWUk9PVA)
->>>>>>> ec59c3043daac971030da62f099faaa4a38eccb1
+
+![image](https://github.com/user-attachments/assets/940e7d6e-6d92-422c-b4c2-7d47d2b647c0)
+
 
 
