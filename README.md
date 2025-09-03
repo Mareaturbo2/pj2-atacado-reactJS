@@ -1,6 +1,6 @@
 # pj2-atacado-reactJS
 
-<img src="https://github.com/Mareaturbo2/pj2-atacado-reactJS/blob/main/atacado-site/src/assets/Logo%20CMYK%20-%20Atacado%20dos%20Presentes%20-%20Horizontal%201.svg" alt="Logo do atacado dos presentes">
+<img src="atacado-pj/src/assets/LogoCMYK.svg" alt="Logo do atacado dos presentes">
 
 
 <h2>PROJETO:</h2>                  Site Remodelado do Atacado dos Presentes.
@@ -15,9 +15,6 @@
 <h2>PROBLEMATICA:</h2> O Atacado dos Presentes, um dos maiores e mais respeitados varejistas de Pernambuco, possui atualmente um site desatualizado, que não acompanha as novas demandas tecnológicas e de design da era WEB 5.0. Aproveitando essa oportunidade, nosso grupo propõe a criação de uma plataforma inovadora, moderna e totalmente responsiva, alinhada às mais recentes tendências do mercado digital. Com uma solução personalizada e de alto impacto, buscamos não só renovar a presença online da empresa, mas também prepará-la para competir de maneira ainda mais assertiva com os principais players do e-commerce, ampliando suas oportunidades de crescimento e solidificando sua liderança no mercado regional.
 
 ********************************************************************************************
-<a href="https://www.figma.com/">
-<img src="https://github.com/Mareaturbo2/pj2-atacado-reactJS/blob/main/atacado-site/src/assets/icon%20full%20color%20(1).svg" alt="Figma-Logo">
-</a>
 
 <h3>FIGMA:[Prototipo de Alta Fidelidade](https://www.figma.com/proto/955Z53QYB7npK9rw6Ep1Ou/RiseUp-Atacado?node-id=1-2&t=KtJ3xnxnP2awjV4B-1&scaling=contain&content-scaling=fixed&page-id=0%3A1)</h3>
 
@@ -27,34 +24,44 @@
 
 ![image](https://github.com/user-attachments/assets/083c6833-65f6-4c9d-b0ec-c56e70a9c1c2)
 
-
 <h2>QUADRO DA SPRINT 01</h2>
-
 
 ![image](https://github.com/user-attachments/assets/2e67b761-d857-41f5-96d6-8a10f5d6588e)
 
+<h2>QUADRO DA SPRINT 03</h2>
+
+![image](https://github.com/user-attachments/assets/6bac20a3-0fea-492e-8481-12548959b5e6).
+
+
+
 
 <h2>ISSUE TRACKER</h2>
-![image](https://github.com/user-attachments/assets/196bc46e-45d1-4c5d-90d0-5411b6663151)
+![image](https://github.com/user-attachments/assets/66e85f72-0cfe-400d-b669-6205c454c234).
+
 
 
 
 ********************************************************************************************
 
-<h2>SCREENPLAY:</h2>
+<h2>SCREENPLAY 01:</h2>
 <a href="https://youtu.be/MvHurUW7kcg" alt=VideoScreenplay:> ScreenPlay </a>
 
 
 
-<h2>SCREENPLAY2</h2>
+<h2>SCREENPLAY 02</h2>
 
 https://github.com/user-attachments/assets/328a2dfd-5f39-4048-8b19-1da1c001b66b
+
+<h2>SCREENPLAY FINAL</h2>
+
+
+https://github.com/user-attachments/assets/567b07e1-fba2-465c-aa27-1f96a754696c
 
 
 
 
 ********************************************************************************************
-<h2>HITORIAS:</h2>
+<h2>HISTORIAS:</h2>
 <h3>User-History-1</h3>
 <h4>Lista de Casamento</h4>
 <p><strong>Usuários:</strong> Luiz e Melissa
@@ -338,16 +345,22 @@ para que as pessoas possam escolher itens e presentear a minha filha que está p
 ********************************************************************************************
 # Relatório sobre a Não Realização da Programação em Par
 
-[Acessar o documento completo](https://docs.google.com/document/d/1syU3MjNj9DxzxpG6RZ_mC1EVPcyZ9ONYHr6nJMOCP1s/edit?tab=t.0)
+<p>
+Nosso grupo não conseguiu realizar a programação em par conforme proposto, principalmente devido a dificuldades na conciliação de horários entre os integrantes. Alguns membros do grupo trabalham em período integral, o que limita bastante a disponibilidade para atividades em conjunto fora do expediente.
+Além disso, há integrantes que possuem compromissos familiares, como o cuidado com filhos, o que demanda flexibilidade e dificulta a participação em encontros síncronos. A diferença nos horários livres de cada integrante tornou inviável a realização de sessões conjuntas de programação.
+Diante disso, decidimos dividir as tarefas individualmente, permitindo que cada membro contribuísse com a parte que lhe cabia conforme sua disponibilidade. Apesar de não termos seguido a metodologia de programação em par, mantivemos uma comunicação constante para assegurar a colaboração mútua e a qualidade do trabalho final entregue.
+</p>
+
 
 ********************************************************************************************
-<<<<<<< HEAD
+
 
 
 =======
-# Diagram de Atividades 
+# Diagrama de Atividades 
 
-[Acessar o documento completo](https://drive.google.com/drive/folders/0APd2fcGqByDWUk9PVA)
->>>>>>> ec59c3043daac971030da62f099faaa4a38eccb1
+
+![image](https://github.com/user-attachments/assets/940e7d6e-6d92-422c-b4c2-7d47d2b647c0)
+
 
 
